@@ -1,0 +1,136 @@
+/* Importar Bootstrap desde CDN */
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css');
+
+/* Importar Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+body {
+    background-image: url('../img/victoria-fondo.webp') !important;
+    background-size: cover !important;      /* Para que la imagen cubra toda la pantalla */
+    background-position: center !important; /* Para centrar la imagen */
+    background-attachment: fixed !important; /* Para que la imagen se quede fija al hacer scroll (opcional) */
+    background-repeat: no-repeat !important; /* Para que la imagen no se repita */
+}
+
+.profile-card {
+    max-width: 1500px !important; /* más grande que los 800px que tenía en styles.css */
+    opacity: 0.7;                /* menos opacidad */
+    background-color: rgba(255, 230, 249, 0.85) !important;
+}
+.card {
+    opacity: 0.7;                /* menos opacidad */
+    background-color: rgba(255, 230, 249, 0.85) !important;
+}
+
+.favorites-list li {                /* menos opacidad */
+    background-color: rgba(255, 230, 249, 0.85) !important;
+}
+
+
+.profile-card .card-body {
+  background: none;
+}
+
+.text-primary {
+    color: #B5759F !important;
+}
+
+.favorites-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.fav-img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+
+/* Fix para que la navbar quede igual que en el resto */
+.navbar .container {
+  max-width: 1140px !important; /* igual que styles.css */
+}
+
+/* Asegurar que la navbar tenga la misma altura y relleno que el resto */
+.navbar {
+  padding: 1rem 0 !important;
+  min-height: 70px !important; /* altura estándar para que no se achique */
+}
+
+.navbar {
+  background: linear-gradient(135deg, #906EA7, #C58FB1) !important;
+  box-shadow: var(--shadow);
+  padding: 1rem 0;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--white) !important;
+}
+
+.navbar-nav .nav-link {
+  color: var(--white) !important;
+  font-weight: 500;
+  margin: 0 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--accent-color) !important;
+  transform: translateY(-2px);
+}
+
+.corazon {
+  position: fixed;
+  top: -20px;
+  font-size: 24px;
+  color: #ff4d6d;
+  animation: caer 4s linear forwards;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+@keyframes caer {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.py-4{
+  background-color: #B5759F !important;
+  opacity: 1 !important;
+}
+
+.btn-success {
+  background-color: #B5759F !important;
+  border-color: #B5759F !important;
+}
+
+.mt-2 {
+  background-color: #B5759F !important;
+  border-color: #B5759F !important;
+}
+
+#carouselProyectos .carousel-item .row {
+  margin: 0 4rem; /* achica solo el contenido */
+}
+
+#carouselProyectos .carousel-control-prev,
+#carouselProyectos .carousel-control-next {
+  width: 5%; /* opcional: asegura que las flechas sigan pegadas a los bordes */
+}
+
+.py-5 {
+      padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}

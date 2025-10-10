@@ -1,0 +1,157 @@
+/* Redefiniendo estilos de bootstrap */
+.navbar {
+  background: linear-gradient(135deg, var(--dark-bg), var(--primary-color));
+  box-shadow: var(--shadow);
+  padding: 1rem 0;
+}
+
+/* Variables de color de la paleta de Game of Thrones */
+:root {
+  --primary-color: #b8860b;
+  --secondary-color: #607d8b;
+  --accent-color: #961313;
+  --card-bg-color: #f5f5dc;
+  --text-color: #333333;
+  --dark-bg: #0d1a26;
+  --white: #ffffff;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --border-radius: 8px;
+}
+
+/* Estilo del cuerpo para el fondo de pantalla */
+body {
+  background-image: url("../img/lucas_background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: var(--dark-bg);
+  /* Nueva fuente para el cuerpo del texto */
+  font-family: "Cormorant Garamond", serif;
+}
+
+/* Estilo de la tarjeta del perfil */
+.profile-card {
+  background-color: var(--card-bg-color) !important;
+  border: 1px solid var(--secondary-color);
+  box-shadow: var(--shadow) !important;
+  border-radius: var(--border-radius);
+}
+
+/* Estilo de la imagen de perfil */
+.profile-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 4px solid var(--primary-color);
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Nombres y títulos */
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+h2,
+h3,
+h4 {
+  /* Nueva fuente para los títulos */
+  font-family: "Uncial Antiqua", cursive;
+}
+
+.text-muted {
+  font-size: 2rem;
+  color: var(--primary-color) !important;
+}
+
+/* Botones con estilo personalizado */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #a4790b;
+  border-color: #a4790b;
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-outline-success {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.btn-outline-success:hover {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+/* Tags de habilidades */
+.skill-tag {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 8px 15px;
+  margin: 5px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.skill-tag:hover {
+  transform: translateY(-3px);
+  background-color: var(--primary-color);
+}
+
+/* Listas de favoritos */
+.favorites-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.favorites-list li {
+  background-color: var(--card-bg-color);
+  border-left: 4px solid var(--primary-color);
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.favorites-list li:hover {
+  transform: scale(1.02);
+  border-left-color: var(--accent-color);
+}
+
+/* Estilo para las nuevas imágenes de favoritos */
+.favorite-image {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid var(--primary-color);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.favorite-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer y navegación inferior */
+.bg-dark {
+  background-color: var(--dark-bg) !important;
+}
