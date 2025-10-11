@@ -1,0 +1,178 @@
+[
+  {
+    "id": 1,
+    "titulo": "EcoTrack",
+    "categoria": "Desarrollo Móvil",
+    "descripcion": "App que mide tu huella de carbono diaria y sugiere acciones para reducirla",
+    "imagen": "https://images.unsplash.com/photo-1521058670233-1d18329b906b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=832",
+    "año": 2025
+  },
+  {
+    "id": 2,
+    "titulo": "MindGarden",
+    "categoria": "Diseño",
+    "descripcion": "Plataforma gamificada para mejorar la salud mental con un jardín virtual que crece según tus hábitos positivos",
+    "imagen": "https://images.unsplash.com/photo-1460533893735-45cea2212645?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1856",
+    "año": 2025
+  },
+  {
+    "id": 3,
+    "titulo": "SmartWaste",
+    "categoria": "Desarrollo Web",
+    "descripcion": "Sistema inteligente de gestión de residuos urbanos con sensores IoT",
+    "imagen": "https://images.unsplash.com/photo-1743258437606-5e3950302c38?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1548",
+    "año": 2025
+  },
+  {
+    "id": 4,
+    "titulo": "NeuroStudy",
+    "categoria": "Desarrollo Móvil",
+    "descripcion": "App educativa que adapta el contenido según tus patrones cerebrales medidos por smartwatch",
+    "imagen": "https://images.unsplash.com/photo-1507413245164-6160d8298b31?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
+    "año": 2025
+  },
+  {
+    "id": 5,
+    "titulo": "VirtualChef",
+    "categoria": "Desarrollo Web",
+    "descripcion": "Asistente culinario con IA que analiza tus ingredientes y crea recetas personalizadas",
+    "imagen": "https://images.unsplash.com/photo-1621510476791-593179b7551d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
+    "año": 2025
+  },
+  {
+    "id": 6,
+    "titulo": "Museo AR",
+    "categoria": "Diseño",
+    "descripcion": "Experiencia de museos en realidad aumentada para explorar arte desde cualquier lugar",
+    "imagen": "https://images.unsplash.com/photo-1583306346437-f2143c0f11fc?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1742",
+    "año": 2025
+  },
+  {
+    "id": 7,
+    "titulo": "SafeRoute",
+    "categoria": "Desarrollo Móvil",
+    "descripcion": "App que recomienda rutas seguras en tiempo real según reportes ciudadanos y datos de iluminación",
+    "imagen": "https://images.unsplash.com/photo-1594935975218-a3596da034a3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
+    "año": 2025
+  },
+  {
+    "id": 8,
+    "titulo": "EduVerse",
+    "categoria": "Desarrollo Web",
+    "descripcion": "Entorno educativo inmersivo en realidad virtual con aulas interactivas",
+    "imagen": "https://images.unsplash.com/photo-1758687125988-29bd184f0d09?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2064",
+    "año": 2025
+  },
+  {
+    "id": 9,
+    "titulo": "AquaSense",
+    "categoria": "Desarrollo IoT",
+    "descripcion": "Dispositivo inteligente que monitorea el consumo y la calidad del agua en el hogar",
+    "imagen": "https://images.unsplash.com/photo-1605608800690-9e496dfdac1c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
+    "año": 2025
+  },
+  {
+    "id": 10,
+    "titulo": "DreamSync",
+    "categoria": "Desarrollo Móvil",
+    "descripcion": "App experimental que registra tus ciclos de sueño y genera visualizaciones artísticas de tus sueños",
+    "imagen": "https://images.unsplash.com/photo-1686827985962-6303655a2e92?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
+    "año": 2025
+  },
+  {
+    "id": 11,
+    "titulo": "ZeroQueue",
+    "categoria": "Desarrollo Web",
+    "descripcion": "Sistema de gestión de turnos basado en IA que elimina las filas físicas en comercios",
+    "imagen": "https://images.unsplash.com/photo-1663786056091-fcb790594901?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
+    "año": 2025
+  },
+  {
+    "id": 12,
+    "titulo": "PetTranslator",
+    "categoria": "Desarrollo Móvil",
+    "descripcion": "Aplicación que interpreta gestos y sonidos de mascotas para mejorar la comunicación humano-animal",
+    "imagen": "https://images.unsplash.com/photo-1554692918-08fa0fdc9db3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
+    "año": 2025
+  },
+  {
+    "id": 13,
+    "titulo": "CityBloom",
+    "categoria": "Diseño Urbano",
+    "descripcion": "Sistema modular de jardines verticales urbanos con monitoreo de humedad y nutrientes",
+    "imagen": "https://images.unsplash.com/photo-1490187763999-9f273a5b7516?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
+    "año": 2025
+  },
+  {
+    "id": 14,
+    "titulo": "ReMind",
+    "categoria": "Desarrollo Móvil",
+    "descripcion": "Asistente digital para personas con Alzheimer que usa reconocimiento facial y voz",
+    "imagen": "https://images.unsplash.com/photo-1758691030894-b8d6fda73d38?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2064",
+    "año": 2025
+  },
+  {
+    "id": 15,
+    "titulo": "SoundScape",
+    "categoria": "Diseño",
+    "descripcion": "Experiencia inmersiva que transforma datos ambientales en música generativa",
+    "imagen": "https://images.unsplash.com/photo-1655667311560-9fd0d2f71a21?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
+    "año": 2025
+  },
+  {
+    "id": 16,
+    "titulo": "FarmNet",
+    "categoria": "Desarrollo Web",
+    "descripcion": "Red colaborativa entre pequeños agricultores con análisis de cultivos por IA",
+    "imagen": "https://images.unsplash.com/photo-1444858291040-58f756a3bdd6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2048",
+    "año": 2025
+  },
+  {
+    "id": 17,
+    "titulo": "SkillSwap",
+    "categoria": "Desarrollo Web",
+    "descripcion": "Plataforma donde usuarios intercambian habilidades sin dinero, usando puntos de experiencia",
+    "imagen": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
+    "año": 2025
+  },
+  {
+    "id": 18,
+    "titulo": "GreenPrint",
+    "categoria": "Diseño",
+    "descripcion": "Sistema de impresión 3D con materiales reciclados y control de impacto ambiental",
+    "imagen": "https://images.unsplash.com/photo-1603380353725-f8a4d39cc41e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
+    "año": 2025
+  },
+  {
+    "id": 19,
+    "titulo": "TimeCapsule",
+    "categoria": "Desarrollo Web",
+    "descripcion": "Plataforma para enviar mensajes o archivos digitales al futuro de forma segura",
+    "imagen": "https://images.unsplash.com/photo-1501139083538-0139583c060f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
+    "año": 2025
+  },
+  {
+    "id": 20,
+    "titulo": "PulseCity",
+    "categoria": "Desarrollo Web",
+    "descripcion": "Mapa interactivo que muestra el ‘pulso’ emocional de una ciudad según redes sociales y eventos",
+    "imagen": "https://images.unsplash.com/photo-1446776899648-aa78eefe8ed0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1744",
+    "año": 2025
+  },
+  {
+    "id": 21,
+    "titulo": "BioWear",
+    "categoria": "Diseño",
+    "descripcion": "Ropa inteligente con sensores biométricos para monitorear salud y postura",
+    "imagen": "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
+    "año": 2025
+  },
+  {
+    "id": 22,
+    "titulo": "HoloMeet",
+    "categoria": "Desarrollo Web",
+    "descripcion": "Plataforma de reuniones holográficas con avatares realistas generados por IA",
+    "imagen": "https://images.unsplash.com/photo-1669977731132-80652bf93050?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
+    "año": 2025
+  }
+]

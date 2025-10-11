@@ -8,6 +8,7 @@ import Jose from './pages/Jose';
 import Lucas from './pages/Lucas';
 import Sebastian from './pages/Sebastian';
 import Victoria from './pages/Victoria';
+import Galeria from './pages/GaleriaJsonPage';
 
 export default function App() {
   return (
@@ -22,6 +23,8 @@ export default function App() {
           <Route path="/Lucas" element={<Lucas />} />
           <Route path="/sebastian" element={<Sebastian />} />
           <Route path="/victoria" element={<Victoria />} />
+          <Route path="/galeria" element={<Galeria />} />
+
         </Routes>
       </main>
       <Footer />
