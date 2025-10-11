@@ -480,3 +480,11 @@ footer {
   width: 66px;
   text-align: center;
 }
+.weather-widget {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  color: #333;
+  font-size: 1.1rem;
+}
