@@ -34,16 +34,6 @@ Tecnologías utilizadas
 | React Router DOM | Manejo de rutas en la SPA |
 
 
-  `````Estructura del proyecto
-src/
-├── assets/ # Imágenes, videos y recursos multimedia
-├── components/ # Componentes reutilizables (Navbar, Footer, etc.)
-├── pages/ # Páginas principales (Home, Bitacora, Victoria, etc.)
-├── css/ # Estilos CSS personalizados
-├── App.jsx # Enrutamiento principal de la SPA
-└── main.jsx # Punto de entrada `````
-
- 
 API del Clima
 El proyecto obtiene información del clima actual de Buenos Aires utilizando la API pública Open-Meteo.
 Instalación y ejecución
@@ -65,11 +55,18 @@ Luego abra en su navegador:
 http://localhost:5173
 
 
-
-
-
 Objetivos del proyecto
 -Aplicar los conceptos de componentización y reutilización de React.
 -Integrar servicios externos mediante APIs públicas.
 -Implementar una interfaz responsiva y atractiva.
 -Practicar control de versiones con Git y GitHub.
+
+
+  `````Estructura del proyecto
+src/
+├── assets/ # Imágenes, videos y recursos multimedia
+├── components/ # Componentes reutilizables (Navbar, Footer, etc.)
+├── pages/ # Páginas principales (Home, Bitacora, Victoria, etc.)
+├── css/ # Estilos CSS personalizados
+├── App.jsx # Enrutamiento principal de la SPA
+└── main.jsx # Punto de entrada 
