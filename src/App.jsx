@@ -10,7 +10,7 @@ import HomePage from "./pages/Home";
 import BitacoraPage from "./pages/Bitacora";
 import IntegrantePage from "./pages/IntegrantePage";
 // (Aquí importarías las nuevas páginas cuando las crees)
-import JsonPage from "./data/galeria.json";
+import Galeria from './pages/GaleriaJsonPage';
 // import ApiPage from './pages/ApiPage';
 
 // --- Componente Layout ---
@@ -49,6 +49,7 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
         <Route path="bitacora" element={<BitacoraPage />} />
+         <Route path="/galeria" element={<Galeria />} />
 
         {/* La ruta vuelve a ser como al principio */}
         <Route path="integrantes/:id" element={<IntegrantePage />} />
