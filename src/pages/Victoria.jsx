@@ -452,33 +452,16 @@ export default function Victoria() {
                 <a href="/lucas" className="btn btn-outline-light">
                   <i className="bi bi-arrow-left me-1"></i>Perfil anterior
                 </a>
+<div className="text-center">
+  <small>Otros integrantes:</small>
+  <div className="mt-2">
+    <Link to="/lucas" className="btn btn-sm btn-outline-light me-2">Lucas</Link>
+    <Link to="/sebastian" className="btn btn-sm btn-outline-light me-2">Sebastian</Link>
+    <Link to="/estiven" className="btn btn-sm btn-outline-light me-2">Estiven</Link>
+    <Link to="/jose" className="btn btn-sm btn-outline-light">Jose</Link>
+  </div>
+</div>
 
-                <div className="text-center">
-                  <small>Otros integrantes:</small>
-                  <div className="mt-2">
-                    <a
-                      href="/lucas"
-                      className="btn btn-sm btn-outline-light me-2"
-                    >
-                      Lucas
-                    </a>
-                    <a
-                      href="/sebastian"
-                      className="btn btn-sm btn-outline-light me-2"
-                    >
-                      Sebastian
-                    </a>
-                    <a
-                      href="/estiven"
-                      className="btn btn-sm btn-outline-light me-2"
-                    >
-                      Estiven
-                    </a>
-                    <a href="/jose" className="btn btn-sm btn-outline-light">
-                      Jose
-                    </a>
-                  </div>
-                </div>
 
                 <a href="/sebastian" className="btn btn-outline-light">
                   Siguiente perfil<i className="bi bi-arrow-right ms-1"></i>
