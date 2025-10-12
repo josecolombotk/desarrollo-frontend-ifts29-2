@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { Carousel } from "bootstrap";
 import "../css/victoria.css";
+import { Link } from "react-router-dom";
+
 
 // Importar imágenes desde assets
 import victoriaImg from "../assets/victoria-ind.png";
