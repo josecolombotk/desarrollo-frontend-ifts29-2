@@ -1,5 +1,5 @@
 /* Importar Bootstrap Icons */
-@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css');
+/* @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css'); -> Ya se importa en index.html */
 
 /* Variables */
 :root {
@@ -14,13 +14,6 @@
   --shadow-hover: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Reset y estilos globales */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .galeria-container {
   min-height: 100vh;
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
@@ -28,7 +21,7 @@
 }
 
 /* Loading */
-.loading-container {
+.galeria-container .loading-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,7 +31,7 @@
   color: white;
 }
 
-.spinner {
+.galeria-container .spinner {
   width: 50px;
   height: 50px;
   border: 4px solid rgba(255, 255, 255, 0.3);
@@ -53,7 +46,7 @@
 }
 
 /* Header */
-.galeria-header {
+.galeria-container .galeria-header {
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   color: white;
   padding: 4rem 0 3rem;
@@ -61,14 +54,14 @@
   box-shadow: var(--shadow);
 }
 
-.galeria-titulo {
+.galeria-container .galeria-titulo {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
   animation: fadeInDown 0.8s ease;
 }
 
-.galeria-subtitulo {
+.galeria-container .galeria-subtitulo {
   font-size: 1.2rem;
   opacity: 0.9;
   animation: fadeInUp 0.8s ease;
@@ -97,7 +90,7 @@
 }
 
 /* Controles */
-.controles-section {
+.galeria-container .controles-section {
   padding: 2rem 0;
   background: white;
   box-shadow: var(--shadow);
@@ -106,20 +99,20 @@
   z-index: 100;
 }
 
-.search-box {
+.galeria-container .search-box {
   position: relative;
   display: flex;
   align-items: center;
 }
 
-.search-box i {
+.galeria-container .search-box i {
   position: absolute;
   left: 15px;
   color: var(--text-light);
   font-size: 1.2rem;
 }
 
-.search-box input {
+.galeria-container .search-box input {
   padding: 12px 45px 12px 45px;
   border: 2px solid #e0e0e0;
   border-radius: 50px;
@@ -128,13 +121,13 @@
   width: 100%;
 }
 
-.search-box input:focus {
+.galeria-container .search-box input:focus {
   border-color: var(--primary-color);
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
   outline: none;
 }
 
-.clear-btn {
+.galeria-container .clear-btn {
   position: absolute;
   right: 10px;
   background: none;
@@ -145,18 +138,18 @@
   transition: color 0.3s ease;
 }
 
-.clear-btn:hover {
+.galeria-container .clear-btn:hover {
   color: var(--primary-color);
 }
 
-.filtros-container {
+.galeria-container .filtros-container {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   justify-content: flex-end;
 }
 
-.filtro-btn {
+.galeria-container .filtro-btn {
   padding: 8px 20px;
   border: 2px solid var(--primary-color);
   background: white;
@@ -168,26 +161,26 @@
   text-transform: capitalize;
 }
 
-.filtro-btn:hover {
+.galeria-container .filtro-btn:hover {
   background: var(--primary-color);
   color: white;
   transform: translateY(-2px);
 }
 
-.filtro-btn.active {
+.galeria-container .filtro-btn.active {
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: white;
   box-shadow: var(--shadow);
 }
 
-.resultados-info {
+.galeria-container .resultados-info {
   color: var(--text-light);
   font-size: 0.95rem;
   display: flex;
   align-items: center;
 }
 
-.resultados-info i {
+.galeria-container .resultados-info i {
   color: #4caf50;
 }
 
@@ -196,7 +189,7 @@
   padding: 3rem 0;
 }
 
-.proyecto-card {
+.galeria-container .proyecto-card {
   background: white;
   border-radius: 15px;
   overflow: hidden;
@@ -207,26 +200,26 @@
   flex-direction: column;
 }
 
-.proyecto-card:hover {
+.galeria-container .proyecto-card:hover {
   transform: translateY(-10px);
   box-shadow: var(--shadow-hover);
 }
 
-.card-image-container {
+.galeria-container .card-image-container {
   position: relative;
   width: 100%;
   height: 250px;
   overflow: hidden;
 }
 
-.card-img {
+.galeria-container .card-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
 
-.proyecto-card:hover .card-img {
+.galeria-container .proyecto-card:hover .card-img {
   transform: scale(1.1);
 }
 
@@ -241,8 +234,8 @@
   background: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent);
 }
 
-.categoria-badge,
-.año-badge {
+.galeria-container .categoria-badge,
+.galeria-container .año-badge {
   padding: 6px 12px;
   border-radius: 20px;
   font-size: 0.85rem;
@@ -250,31 +243,31 @@
   backdrop-filter: blur(10px);
 }
 
-.categoria-badge {
+.galeria-container .categoria-badge {
   background: rgba(102, 126, 234, 0.9);
   color: white;
 }
 
-.año-badge {
+.galeria-container .año-badge {
   background: rgba(255, 255, 255, 0.9);
   color: var(--text-dark);
 }
 
-.card-body {
+.galeria-container .card-body {
   padding: 1.5rem;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
 
-.card-titulo {
+.galeria-container .card-titulo {
   font-size: 1.3rem;
   font-weight: 600;
   color: var(--text-dark);
   margin-bottom: 0.5rem;
 }
 
-.card-descripcion {
+.galeria-container .card-descripcion {
   color: var(--text-light);
   font-size: 0.95rem;
   line-height: 1.6;
@@ -282,11 +275,11 @@
   margin-bottom: 1rem;
 }
 
-.card-footer {
+.galeria-container .card-footer {
   margin-top: auto;
 }
 
-.btn-ver-mas {
+.galeria-container .btn-ver-mas {
   width: 100%;
   padding: 10px 20px;
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
@@ -301,30 +294,30 @@
   justify-content: center;
 }
 
-.btn-ver-mas:hover {
+.galeria-container .btn-ver-mas:hover {
   transform: translateX(5px);
   box-shadow: var(--shadow-hover);
 }
 
 /* No resultados */
-.no-resultados {
+.galeria-container .no-resultados {
   text-align: center;
   padding: 4rem 2rem;
   color: var(--text-light);
 }
 
-.no-resultados i {
+.galeria-container .no-resultados i {
   font-size: 5rem;
   color: var(--primary-color);
   margin-bottom: 1rem;
 }
 
-.no-resultados h3 {
+.galeria-container .no-resultados h3 {
   color: var(--text-dark);
   margin-bottom: 0.5rem;
 }
 
-.no-resultados .btn {
+.galeria-container .no-resultados .btn {
   margin-top: 1rem;
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   border: none;
@@ -333,14 +326,14 @@
 }
 
 /* Footer */
-.galeria-footer {
+.galeria-container .galeria-footer {
   background: var(--text-dark);
   color: white;
   padding: 2rem 0;
   margin-top: 3rem;
 }
 
-.btn-volver-arriba {
+.galeria-container .btn-volver-arriba {
   background: none;
   border: none;
   color: white;
@@ -350,18 +343,18 @@
   transition: all 0.3s ease;
 }
 
-.btn-volver-arriba:hover {
+.galeria-container .btn-volver-arriba:hover {
   color: var(--accent-color);
   transform: translateY(-5px);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .galeria-titulo {
+  .galeria-container .galeria-titulo {
     font-size: 2rem;
   }
 
-  .filtros-container {
+  .galeria-container .filtros-container {
     justify-content: center;
   }
 

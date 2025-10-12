@@ -1,12 +1,13 @@
-body {
+.sebastian-page-container {
             background-image: url("../img/sebastian-redes.jpg");
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-color: var(--dark-bg);
+            min-height: 100vh;
         }
         
-        .portfolio-header {
+.sebastian-page-container .portfolio-header {
             background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
             color: white;
             padding: 3rem 0;
@@ -15,7 +16,7 @@ body {
             border-bottom: 3px solid #e94560;
         }
         
-        .section-title {
+.sebastian-page-container .section-title {
             color: #e94560;
             padding-bottom: 15px;
             margin-bottom: 30px;
@@ -23,7 +24,7 @@ body {
             text-align: center;
         }
         
-        .movie-card, .music-card {
+.sebastian-page-container .movie-card, .sebastian-page-container .music-card {
             position: relative;
             overflow: hidden;
             border-radius: 10px;
@@ -34,23 +35,23 @@ body {
             background: linear-gradient(145deg, #16213e, #1a1a2e);
         }
         
-        .movie-card:hover, .music-card:hover {
+.sebastian-page-container .movie-card:hover, .sebastian-page-container .music-card:hover {
             transform: translateY(-12px);
             box-shadow: 0 12px 25px rgba(233, 69, 96, 0.25);
         }
         
-        .card-image {
+.sebastian-page-container .card-image {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
         
-        .movie-card:hover .card-image, .music-card:hover .card-image {
+.sebastian-page-container .movie-card:hover .card-image, .sebastian-page-container .music-card:hover .card-image {
             transform: scale(1.08);
         }
         
-        .card-overlay {
+.sebastian-page-container .card-overlay {
             position: absolute;
             top: 0;
             left: 0;
@@ -69,36 +70,36 @@ body {
             border-radius: 10px;
         }
         
-        .movie-card:hover .card-overlay, .music-card:hover .card-overlay {
+.sebastian-page-container .movie-card:hover .card-overlay, .sebastian-page-container .music-card:hover .card-overlay {
             opacity: 1;
         }
         
-        .card-title {
+.sebastian-page-container .card-title {
             font-size: 1.4rem;
             font-weight: bold;
             margin-bottom: 10px;
             color: #e94560;
         }
         
-        .card-info {
+.sebastian-page-container .card-info {
             font-style: italic;
             margin-bottom: 12px;
             color: #8a8a9c;
         }
         
-        .card-description {
+.sebastian-page-container .card-description {
             font-size: 0.9rem;
             margin-bottom: 15px;
             line-height: 1.5;
         }
         
-        .card-price {
+.sebastian-page-container .card-price {
             font-weight: bold;
             color: #0fce5c;
             margin-bottom: 15px;
         }
         
-        .btn-action {
+.sebastian-page-container .btn-action {
             background-color: #e94560;
             border: none;
             padding: 8px 20px;
@@ -108,61 +109,49 @@ body {
             font-weight: 500;
         }
         
-        .btn-action:hover {
+.sebastian-page-container .btn-action:hover {
             background-color: #ff5c77;
             transform: scale(1.05);
         }
-        
-        .card-content {
+.sebastian-page-container .card-content {
             padding: 15px;
         }
         
-        .card-content h3 {
+.sebastian-page-container .card-content h3 {
             color: #e94560;
             font-size: 1.2rem;
             margin-top: 10px;
         }
         
-        .card-content p {
+.sebastian-page-container .card-content p {
             color: #8a8a9c;
             font-size: 0.9rem;
         }
-        
-        .music-icon {
+.sebastian-page-container .music-icon {
             font-size: 2.5rem;
             color: #e94560;
             margin-bottom: 15px;
         }
         
-        footer {
+.sebastian-page-container footer {
             background-color: #0f3460;
             color: white;
             padding: 2.5rem 0;
             margin-top: 4rem;
         }
         
-        .social-icons a {
+.sebastian-page-container .social-icons a {
             color: white;
             font-size: 1.5rem;
             margin: 0 10px;
             transition: color 0.3s ease;
         }
         
-        .social-icons a:hover {
+.sebastian-page-container .social-icons a:hover {
             color: #e94560;
         }
         
-        .navbar {
-            background-color: #16213e !important;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-        }
-        
-        .navbar-brand {
-            color: #e94560 !important;
-            font-weight: bold;
-        }
-
-        .fondo {
+.sebastian-page-container .fondo {
             background-color: rgba(255, 255, 255, 0.616);
         }
         
