@@ -11,39 +11,45 @@ import favicon from "../assets/favicon.png";
 export default function Home() {
   const [clima, setClima] = useState(null);
 
-  // --- Llamada a API de clima ---
-  useEffect(() => {
-    const link = document.createElement("link");
-    const title = document.createElement("title");
-    title.textContent = "Equipo Innovador - Inicio";
-    document.head.appendChild(title);
-    link.rel = "icon";
-    link.href = favicon;
-    document.head.appendChild(link);
+  // Llamada a API de clima
+useEffect(() => {
+  //  favicon y título dinámico
+  const link = document.createElement("link");
+  const title = document.createElement("title");
+  title.textContent = "Equipo Innovador - Inicio";
+  document.head.appendChild(title);
+  link.rel = "icon";
+  link.href = favicon;
+  document.head.appendChild(link);
 
-    return () => {
-      document.head.removeChild(link);
-      document.head.removeChild(title);
-    };
-
-    async function fetchClima() {
-      try {
-        const res = await fetch(
-          "https://api.open-meteo.com/v1/forecast?latitude=-34.61&longitude=-58.38&current_weather=true"
+  // definimos la función y la ejecutamos 
+  async function fetchClima() {
+    try {
+      const res = await fetch(
+        "https://api.open-meteo.com/v1/forecast?latitude=-34.61&longitude=-58.38&current_weather=true"
+      );
+      const data = await res.json();
+      if (data.current_weather) {
+        setClima(
+          `Temperatura actual: ${data.current_weather.temperature}°C, Viento: ${data.current_weather.windspeed} km/h`
         );
-        const data = await res.json();
-        if (data.current_weather) {
-          setClima(
-            `Temperatura actual: ${data.current_weather.temperature}°C, Viento: ${data.current_weather.windspeed} km/h`
-          );
-        }
-      } catch (error) {
-        console.error("Error al obtener el clima:", error);
+      } else {
         setClima("No se pudo obtener el clima.");
       }
+    } catch (error) {
+      console.error("Error al obtener el clima:", error);
+      setClima("Error al conectar con la API del clima.");
     }
-    fetchClima();
-  }, []);
+  }
+
+  fetchClima();
+
+  return () => {
+    document.head.removeChild(link);
+    document.head.removeChild(title);
+  };
+}, []);
+
 
   const integrantes = [
     {
@@ -165,7 +171,9 @@ export default function Home() {
       <section className="py-5 bg-light text-center">
         <div className="container">
           <h4 className="mb-3 text-primary">Clima actual en Buenos Aires 🌤️</h4>
-          <p className="lead">{clima || "Cargando clima..."}</p>
+          <p className="lead" style={{ color: "#0d6efd", fontWeight: "bold" }}>
+      {clima || "Cargando clima..."}
+          </p>
         </div>
       </section>
     </div>
