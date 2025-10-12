@@ -1,15 +1,35 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Carousel } from "bootstrap";
 import "../css/jose.css"; // solo para este componente
-
+import joseImg from "../assets/jose.png";
+import juego1Img from "../assets/juego1.png";
+import juego2Img from "../assets/juego2.png";
+import juego3Img from "../assets/juego3.png";
+import juego4Img from "../assets/juego4.png";
+import loganFondoVideo from "../assets/logan fondo.mp4";
+import logan1Img from "../assets/logan.png";
+import logan2Img from "../assets/logan2.jpeg";
+import logan3Img from "../assets/logan3.jpeg";
+import logan4Img from "../assets/logan4.jpeg";
+import joseFavicon from "../assets/jose-favicon.png";
 
 export default function Jose() {
-  const imagenesLogan = [
-    "/img/logan.png",
-    "/img/logan2.jpeg",
-    "/img/logan3.jpeg",
-    "/img/logan4.jpeg",
-  ];
+  useEffect(() => {
+    const link = document.createElement("link");
+    const title = document.createElement("title");
+    link.rel = "icon";
+    link.href = joseFavicon;
+    title.textContent = "José - Perfil";
+    document.head.appendChild(link);
+    document.head.appendChild(title);
+
+    return () => {
+      document.head.removeChild(link);
+      document.head.removeChild(title);
+    };
+  }, []);
+
+  const imagenesLogan = [logan1Img, logan2Img, logan3Img, logan4Img];
   const [indiceImagen, setIndiceImagen] = useState(0);
   const imgRef = useRef(null);
 
@@ -59,60 +79,25 @@ export default function Jose() {
   }, []);
 
   return (
-    <div id="top">
-      {/* Navbar */}
-      <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div className="container">
-          <a className="navbar-brand d-flex align-items-center" href="/">
-            <img src="/img/logo.svg" alt="Logo" width="40" height="40" className="me-2" />
-            Equipo Innovador
-          </a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ms-auto">
-              <li className="nav-item">
-                <a className="nav-link" href="/">Inicio</a>
-              </li>
-              <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
-                  Integrantes
-                </a>
-                <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="/lucas">Lucas</a></li>
-                  <li><a className="dropdown-item" href="/victoria">Victoria</a></li>
-                  <li><a className="dropdown-item" href="/sebastian">Sebastián</a></li>
-                  <li><a className="dropdown-item active" href="/jose">Jose</a></li>
-                  <li><a className="dropdown-item" href="/estiven">Estiven</a></li>
-                </ul>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/bitacora">Bitácora</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
+    <div id="top" className="jose-page-container">
       {/* Sección perfil */}
       <section className="py-5 mt-5">
         <div className="container">
           <div className="row g-4">
-
             {/* Col Izquierda */}
             <div className="col-lg-6">
               <div className="card profile-card shadow-lg h-100">
                 <div className="card-body p-5">
-                  <img src="/img/jose.png" alt="José" className="profile-img mb-3" />
+                  <img src={joseImg} alt="José" className="profile-img mb-3" />
                   <p className="text-muted mb-3">Rafaela, Santa Fe</p>
                   <p className="text-muted mb-3">38 años</p>
 
                   <h3 className="text-warning mb-3">Sobre Jose</h3>
                   <p className="lead mb-4">
-                    Simplemente un estudiante que busca su camino en el apasionante mundo de la programación.
-                    Me gusta aprender y crear juegos 2D, además de jugar videojuegos indie. La naturaleza y
-                    el ejercicio me parecen un dúo fantástico.
+                    Simplemente un estudiante que busca su camino en el
+                    apasionante mundo de la programación. Me gusta aprender y
+                    crear juegos 2D, además de jugar videojuegos indie. La
+                    naturaleza y el ejercicio me parecen un dúo fantástico.
                   </p>
 
                   <h4 className="text-warning mb-3">Habilidades</h4>
@@ -127,32 +112,62 @@ export default function Jose() {
                   </div>
 
                   {/* Carrusel */}
-                  <div id="carruselJose" className="carousel slide mt-4 shadow-lg">
+                  <div
+                    id="carruselJose"
+                    className="carousel slide mt-4 shadow-lg"
+                  >
                     <div className="carousel-inner rounded">
                       <div className="carousel-item active">
-                        <img src="/img/juego1.png" className="d-block w-100" alt="Imagen 1 de José" />
+                        <img
+                          src={juego1Img}
+                          className="d-block w-100"
+                          alt="Imagen 1 de José"
+                        />
                       </div>
                       <div className="carousel-item">
-                        <img src="/img/juego2.png" className="d-block w-100" alt="Imagen 2 de José" />
+                        <img
+                          src={juego2Img}
+                          className="d-block w-100"
+                          alt="Imagen 2 de José"
+                        />
                       </div>
                       <div className="carousel-item">
-                        <img src="/img/juego3.png" className="d-block w-100" alt="Imagen 3 de José" />
+                        <img
+                          src={juego3Img}
+                          className="d-block w-100"
+                          alt="Imagen 3 de José"
+                        />
                       </div>
                       <div className="carousel-item">
-                        <img src="/img/juego4.png" className="d-block w-100" alt="Imagen 4 de José" />
+                        <img
+                          src={juego4Img}
+                          className="d-block w-100"
+                          alt="Imagen 4 de José"
+                        />
                       </div>
                     </div>
-                    <button className="carousel-control-prev" type="button" data-bs-target="#carruselJose" data-bs-slide="prev">
+                    <button
+                      className="carousel-control-prev"
+                      type="button"
+                      data-bs-target="#carruselJose"
+                      data-bs-slide="prev"
+                    >
                       <span className="carousel-control-prev-icon"></span>
                     </button>
-                    <button className="carousel-control-next" type="button" data-bs-target="#carruselJose" data-bs-slide="next">
+                    <button
+                      className="carousel-control-next"
+                      type="button"
+                      data-bs-target="#carruselJose"
+                      data-bs-slide="next"
+                    >
                       <span className="carousel-control-next-icon"></span>
                     </button>
                   </div>
 
                   <hr />
                   <p className="lead mb-0">
-                    Al no tener mucho que agregar sobre mí, quisiera usar la página para presentar al héroe de Marvel, Wolverine.
+                    Al no tener mucho que agregar sobre mí, quisiera usar la
+                    página para presentar al héroe de Marvel, Wolverine.
                   </p>
                 </div>
               </div>
@@ -161,36 +176,96 @@ export default function Jose() {
             {/* Col Derecha */}
             <div className="col-lg-6">
               <div className="card profile-card shadow-lg h-100 position-relative">
+                {/* Video de fondo */}
                 <video autoPlay muted loop playsInline className="video-bg">
-                  <source src="/video/logan fondo.mp4" type="video/mp4" />
+                  <source src={loganFondoVideo} type="video/mp4" />
                 </video>
                 <div className="card-body p-5 text-center">
-                  <img ref={imgRef} src={imagenesLogan[indiceImagen]} alt="Wolverine" className="profile-img mb-3" id="profile-image" />
+                  <img
+                    ref={imgRef}
+                    src={imagenesLogan[indiceImagen]}
+                    alt="Wolverine"
+                    className="profile-img mb-3"
+                    id="profile-image"
+                  />
                   <h2 className="fw-bold text-warning">Wolverine</h2>
-                  <button className="btn btn-info mb-4" onClick={cambiarImagen}>Cambiar imagen</button>
-                  <button className="btn btn-danger mt-3" onClick={datoRandom}>Dato Random</button>
+                  <p className="text-muted mb-3">
+                    <i className="bi bi-geo-alt-fill me-1"></i>Canadá
+                  </p>
+                  <p className="text-muted mb-3">
+                    <i className="bi bi-calendar-event me-1"></i>Más de 100 años
+                  </p>
+
+                  <button
+                    className="btn btn-info mb-4"
+                    id="btn-cambiar"
+                    onClick={cambiarImagen}
+                  >
+                    <i className="bi bi-arrow-repeat me-1"></i>Cambiar imagen
+                  </button>
+
+                  <p className="lead mb-4">
+                    Nací a finales del siglo XIX en Canadá, bajo el nombre de
+                    James Howlett, siendo hijo de una familia rica. Durante mi
+                    infancia, descubrí mi naturaleza mutante cuando me brotaron
+                    garras óseas de las manos tras presenciar un trauma
+                    familiar. Desde ese momento huí de casa y adopté el nombre
+                    de Logan, llevando una vida errante marcada por la violencia
+                    y la soledad.
+                  </p>
+
+                  <h4 className="text-warning mb-3">Habilidades</h4>
+                  <div className="skills-list mb-4">
+                    <span className="skill-tag">
+                      Factor de curación acelerado
+                    </span>
+                    <span className="skill-tag">Garras de adamantium</span>
+                    <span className="skill-tag">Combate cuerpo a cuerpo</span>
+                    <span className="skill-tag">Sentidos agudizados</span>
+                    <span className="skill-tag">Resistencia sobrehumana</span>
+                    <span className="skill-tag">
+                      Envejecimiento casi inexistente
+                    </span>
+                  </div>
+
+                  <h4 className="text-warning mb-3">Experiencia</h4>
+                  <div className="mb-4">
+                    <h5 className="fw-bold">Miembro de los X-Men</h5>
+                    <p className="text-muted mb-2">
+                      Instituto Xavier • Desde 1975
+                    </p>
+                    <p>
+                      Lucho por la paz y la coexistencia entre mutantes y
+                      humanos, protegiendo a quienes no pueden defenderse.
+                    </p>
+                  </div>
+                  <div className="mb-4">
+                    <h5 className="fw-bold">Soldado y mercenario</h5>
+                    <p className="text-muted mb-2">
+                      Diversas guerras y conflictos
+                    </p>
+                    <p>
+                      He peleado en guerras a lo largo de los años, incluyendo
+                      las dos guerras mundiales, siempre sobreviviendo y
+                      adaptándome.
+                    </p>
+                  </div>
+
+                  <div className="mb-4">
+                    <button
+                      className="btn btn-danger mt-3"
+                      onClick={datoRandom}
+                    >
+                      <i className="bi bi-lightning-charge-fill me-1"></i>Dato
+                      Random
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-dark text-light py-4 mt-5">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-6">
-              <h5>Equipo Innovador</h5>
-              <p className="mb-0">Desarrollando el futuro, un proyecto a la vez.</p>
-            </div>
-            <div className="col-md-6 text-md-end">
-              <p className="mb-0">&copy; 2025 Equipo Innovador. Todos los derechos reservados.</p>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

@@ -20,6 +20,7 @@ import fondoImg from "../assets/victoria-fondo.webp";
 
 export default function Victoria() {
   const carouselRef = useRef(null);
+  const pageContainerRef = useRef(null); // 1. Referencia para el contenedor principal
 
   // 🧚🏻‍♀️ Animación de corazones
   const mostrarCodigoEjemplo = () => {
@@ -31,15 +32,16 @@ export default function Victoria() {
   };
 
   const crearCorazon = () => {
+    if (!pageContainerRef.current) return; // Asegurarse de que el contenedor exista
+
     const corazon = document.createElement("div");
     corazon.classList.add("corazon");
     corazon.innerHTML = "🧚🏻‍♀️";
     corazon.style.position = "fixed";
     corazon.style.left = Math.random() * 100 + "vw";
     corazon.style.fontSize = Math.random() * 20 + 20 + "px";
-    corazon.style.zIndex = "9999";
     corazon.style.pointerEvents = "none";
-    document.body.appendChild(corazon);
+    pageContainerRef.current.appendChild(corazon); // 2. Añadir el corazón al contenedor de la página
 
     setTimeout(() => {
       corazon.remove();
@@ -78,58 +80,24 @@ export default function Victoria() {
 
   // Aplicar estilos globales al montar el componente
   useEffect(() => {
-    document.body.style.margin = '0';
-    document.body.style.padding = '0';
-    document.body.style.overflowX = 'hidden';
-    document.documentElement.style.overflowX = 'hidden';
-    
+    document.body.style.margin = "0";
+    document.body.style.padding = "0";
+    document.body.style.overflowX = "hidden";
+    document.documentElement.style.overflowX = "hidden";
+
     return () => {
-      document.body.style.overflowX = '';
-      document.documentElement.style.overflowX = '';
+      document.body.style.overflowX = "";
+      document.documentElement.style.overflowX = "";
     };
   }, []);
 
   return (
-    <div id="top" style={{ backgroundImage: `url(${fondoImg})` }}>
-      {/* 🌐 Navbar */}
-      <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div className="container">
-          <a className="navbar-brand d-flex align-items-center" href="/">
-            <img src={logoImg} alt="Logo" width="40" height="40" className="me-2" />
-            Equipo Innovador
-          </a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ms-auto">
-              <li className="nav-item">
-                <a className="nav-link" href="/">
-                  <i className="bi bi-house-fill me-1"></i>Inicio
-                </a>
-              </li>
-              <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
-                  <i className="bi bi-people-fill me-1"></i>Integrantes
-                </a>
-                <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="/lucas">Lucas</a></li>
-                  <li><a className="dropdown-item active" href="/victoria">Victoria</a></li>
-                  <li><a className="dropdown-item" href="/sebastian">Sebastián</a></li>
-                  <li><a className="dropdown-item" href="/jose">Jose</a></li>
-                  <li><a className="dropdown-item" href="/estiven">Estiven</a></li>
-                </ul>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/bitacora">
-                  <i className="bi bi-journal-text me-1"></i>Bitácora
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
+    <div
+      id="top"
+      ref={pageContainerRef} // 3. Asignar la referencia al div
+      className="victoria-page-container"
+      style={{ backgroundImage: `url(${fondoImg})` }}
+    >
       {/* 🪶 Perfil Principal */}
       <section className="py-5 mt-5">
         <div className="container">
@@ -139,15 +107,25 @@ export default function Victoria() {
                 <div className="card-body p-5">
                   <div className="row align-items-center">
                     <div className="col-lg-4 text-center mb-4 mb-lg-0">
-                      <img src={victoriaImg} alt="Victoria" className="profile-img mb-3" />
-                      <h2 className="fw-bold text-primary typing-effect">Victoria</h2>
+                      <img
+                        src={victoriaImg}
+                        alt="Victoria"
+                        className="profile-img mb-3"
+                      />
+                      <h2 className="fw-bold text-primary typing-effect">
+                        Victoria
+                      </h2>
                       <p className="text-muted mb-3">
-                        <i className="bi bi-geo-alt-fill me-1"></i>Buenos Aires, Argentina
+                        <i className="bi bi-geo-alt-fill me-1"></i>Buenos Aires,
+                        Argentina
                       </p>
                       <p className="text-muted mb-3">
                         <i className="bi bi-calendar-event me-1"></i>23 años
                       </p>
-                      <button className="btn btn-success" onClick={mostrarCodigoEjemplo}>
+                      <button
+                        className="btn btn-success"
+                        onClick={mostrarCodigoEjemplo}
+                      >
                         <i className="bi me-1"></i>¡Qué llueva!
                       </button>
                     </div>
@@ -155,7 +133,13 @@ export default function Victoria() {
                     <div className="col-lg-8">
                       <h3 className="text-primary mb-3">Sobre mí</h3>
                       <p className="lead mb-4">
-                        Diseñadora multimedia especializada en UX/UI. Lo que más me interesa es diseñar aplicaciones desde cero y darles vida a través de interfaces intuitivas y visualmente atractivas. Me apasiona transformar ideas en productos digitales coherentes, usables y funcionales, combinando el diseño con la programación para crear experiencias completas y bien pensadas.
+                        Diseñadora multimedia especializada en UX/UI. Lo que más
+                        me interesa es diseñar aplicaciones desde cero y darles
+                        vida a través de interfaces intuitivas y visualmente
+                        atractivas. Me apasiona transformar ideas en productos
+                        digitales coherentes, usables y funcionales, combinando
+                        el diseño con la programación para crear experiencias
+                        completas y bien pensadas.
                       </p>
 
                       <h4 className="text-primary mb-3">Habilidades</h4>
@@ -184,10 +168,12 @@ export default function Victoria() {
             <div className="col-12">
               <div className="card profile-card shadow-lg mt-4">
                 <div className="card-body p-4">
-                  <h3 className="text-primary mb-0 d-flex justify-content-between align-items-center" 
-                      style={{cursor: 'pointer'}} 
-                      data-bs-toggle="collapse" 
-                      data-bs-target="#showcaseProyectos">
+                  <h3
+                    className="text-primary mb-0 d-flex justify-content-between align-items-center"
+                    style={{ cursor: "pointer" }}
+                    data-bs-toggle="collapse"
+                    data-bs-target="#showcaseProyectos"
+                  >
                     Proyectos destacados
                     <i className="bi bi-chevron-down"></i>
                   </h3>
@@ -195,23 +181,40 @@ export default function Victoria() {
 
                 <div id="showcaseProyectos" className="collapse">
                   <div className="card-body pt-0">
-                    <div id="carouselProyectos" className="carousel slide" data-bs-ride="carousel" ref={carouselRef}>
+                    <div
+                      id="carouselProyectos"
+                      className="carousel slide"
+                      data-bs-ride="carousel"
+                      ref={carouselRef}
+                    >
                       <div className="carousel-inner">
                         {/* Proyecto 1 */}
                         <div className="carousel-item active">
                           <div className="row align-items-center">
                             <div className="col-md-6">
-                              <img src={debootImg} className="img-fluid rounded shadow-sm" alt="Deboot" />
+                              <img
+                                src={debootImg}
+                                className="img-fluid rounded shadow-sm"
+                                alt="Deboot"
+                              />
                             </div>
                             <div className="col-md-6">
                               <h4 className="text-primary">Deboot</h4>
                               <p className="text-muted">
-                                Deboot es una aplicación diseñada específicamente para ayudar a los estudiantes universitarios a encontrar empleo. Ofrece una conexión directa con empresas que buscan talento joven y proporciona oportunidades de pasantías y empleos a medio tiempo, facilitando la transición del ámbito académico al profesional.
+                                Deboot es una aplicación diseñada
+                                específicamente para ayudar a los estudiantes
+                                universitarios a encontrar empleo. Ofrece una
+                                conexión directa con empresas que buscan talento
+                                joven y proporciona oportunidades de pasantías y
+                                empleos a medio tiempo, facilitando la
+                                transición del ámbito académico al profesional.
                               </p>
-                              <a href="https://www.figma.com/proto/REgjL9uQTrCKBtY75HD29B/Deboot?page-id=770%3A10540&node-id=770-11704&p=f&viewport=528%2C1022%2C0.04&t=OjVqIR37nmRkxoyT-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=770%3A11696" 
-                                 target="_blank" 
-                                 rel="noopener noreferrer" 
-                                 className="btn btn-success mt-2">
+                              <a
+                                href="https://www.figma.com/proto/REgjL9uQTrCKBtY75HD29B/Deboot?page-id=770%3A10540&node-id=770-11704&p=f&viewport=528%2C1022%2C0.04&t=OjVqIR37nmRkxoyT-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=770%3A11696"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="btn btn-success mt-2"
+                              >
                                 Conoce el proyecto
                               </a>
                             </div>
@@ -222,17 +225,29 @@ export default function Victoria() {
                         <div className="carousel-item">
                           <div className="row align-items-center">
                             <div className="col-md-6">
-                              <img src={hypedImg} className="img-fluid rounded shadow-sm" alt="Hyped" />
+                              <img
+                                src={hypedImg}
+                                className="img-fluid rounded shadow-sm"
+                                alt="Hyped"
+                              />
                             </div>
                             <div className="col-md-6">
                               <h4 className="text-primary">Hyped</h4>
                               <p className="text-muted">
-                                Hyped es una aplicación destinada a descubrir eventos y comprar entradas de manera fácil y emocionante. Con una interfaz intuitiva y emocionantes funcionalidades, te permite explorar una amplia variedad de eventos y asegurar tus entradas en pocos pasos, para que nunca te pierdas tus experiencias favoritas.
+                                Hyped es una aplicación destinada a descubrir
+                                eventos y comprar entradas de manera fácil y
+                                emocionante. Con una interfaz intuitiva y
+                                emocionantes funcionalidades, te permite
+                                explorar una amplia variedad de eventos y
+                                asegurar tus entradas en pocos pasos, para que
+                                nunca te pierdas tus experiencias favoritas.
                               </p>
-                              <a href="https://www.figma.com/proto/paQ5YEosDDSi5DOzWCowAu/HYPED---Event-App--Copy-?page-id=222%3A299&node-id=222-300&viewport=366%2C-2%2C0.12&t=zNvyxNiPJ5fxy0VC-1&scaling=scale-down&content-scaling=fixed" 
-                                 target="_blank" 
-                                 rel="noopener noreferrer" 
-                                 className="btn btn-success mt-2">
+                              <a
+                                href="https://www.figma.com/proto/paQ5YEosDDSi5DOzWCowAu/HYPED---Event-App--Copy-?page-id=222%3A299&node-id=222-300&viewport=366%2C-2%2C0.12&t=zNvyxNiPJ5fxy0VC-1&scaling=scale-down&content-scaling=fixed"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="btn btn-success mt-2"
+                              >
                                 Conoce el proyecto
                               </a>
                             </div>
@@ -243,17 +258,29 @@ export default function Victoria() {
                         <div className="carousel-item">
                           <div className="row align-items-center">
                             <div className="col-md-6">
-                              <img src={interactImg} className="img-fluid rounded shadow-sm" alt="InteractxTech" />
+                              <img
+                                src={interactImg}
+                                className="img-fluid rounded shadow-sm"
+                                alt="InteractxTech"
+                              />
                             </div>
                             <div className="col-md-6">
                               <h4 className="text-primary">InteractxTech</h4>
                               <p className="text-muted">
-                                InteractxTech es un sitio web que sirve como un punto central para todo lo relacionado con la realidad virtual y aumentada. Puedes encontrar las últimas noticias, reseñas detalladas, tutoriales para desarrolladores y una comunidad apasionada por el panorama de la tecnología inmersiva.
+                                InteractxTech es un sitio web que sirve como un
+                                punto central para todo lo relacionado con la
+                                realidad virtual y aumentada. Puedes encontrar
+                                las últimas noticias, reseñas detalladas,
+                                tutoriales para desarrolladores y una comunidad
+                                apasionada por el panorama de la tecnología
+                                inmersiva.
                               </p>
-                              <a href="https://www.figma.com/proto/1diO6i1TJgw2kV0o2e0837/InteractxTech--Behance-?page-id=901%3A13758&node-id=901-14625&p=f&viewport=-52%2C307%2C0.07&t=NnzLHGojKXjIHsqE-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=901%3A14625" 
-                                 target="_blank" 
-                                 rel="noopener noreferrer" 
-                                 className="btn btn-success mt-2">
+                              <a
+                                href="https://www.figma.com/proto/1diO6i1TJgw2kV0o2e0837/InteractxTech--Behance-?page-id=901%3A13758&node-id=901-14625&p=f&viewport=-52%2C307%2C0.07&t=NnzLHGojKXjIHsqE-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=901%3A14625"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="btn btn-success mt-2"
+                              >
                                 Conoce el proyecto
                               </a>
                             </div>
@@ -262,10 +289,20 @@ export default function Victoria() {
                       </div>
 
                       {/* Controles del carrusel */}
-                      <button className="carousel-control-prev" type="button" data-bs-target="#carouselProyectos" data-bs-slide="prev">
+                      <button
+                        className="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#carouselProyectos"
+                        data-bs-slide="prev"
+                      >
                         <span className="carousel-control-prev-icon"></span>
                       </button>
-                      <button className="carousel-control-next" type="button" data-bs-target="#carouselProyectos" data-bs-slide="next">
+                      <button
+                        className="carousel-control-next"
+                        type="button"
+                        data-bs-target="#carouselProyectos"
+                        data-bs-slide="next"
+                      >
                         <span className="carousel-control-next-icon"></span>
                       </button>
                     </div>
@@ -285,35 +322,60 @@ export default function Victoria() {
               <div className="card h-100 shadow">
                 <div className="card-body">
                   <h4 className="card-title text-primary mb-4">
-                    <i className="bi bi-film me-2"></i>Películas y Series Favoritas
+                    <i className="bi bi-film me-2"></i>Películas y Series
+                    Favoritas
                   </h4>
                   <ul className="favorites-list">
                     <li>
-                      <img src={orgulloImg} alt="Orgullo y Prejuicio" className="fav-img" />
+                      <img
+                        src={orgulloImg}
+                        alt="Orgullo y Prejuicio"
+                        className="fav-img"
+                      />
                       <div>
                         <strong>Orgullo y Prejuicio</strong>
-                        <p className="mb-0 text-muted">Película // Romance // 2005</p>
+                        <p className="mb-0 text-muted">
+                          Película // Romance // 2005
+                        </p>
                       </div>
                     </li>
                     <li>
-                      <img src={renglonesImg} alt="Los Renglones Torcidos" className="fav-img" />
+                      <img
+                        src={renglonesImg}
+                        alt="Los Renglones Torcidos"
+                        className="fav-img"
+                      />
                       <div>
                         <strong>Los Renglones Torcidos de Dios</strong>
-                        <p className="mb-0 text-muted">Película // Suspenso - Misterio // 2022</p>
+                        <p className="mb-0 text-muted">
+                          Película // Suspenso - Misterio // 2022
+                        </p>
                       </div>
                     </li>
                     <li>
-                      <img src={koreanImg} alt="A Korean Odyssey" className="fav-img" />
+                      <img
+                        src={koreanImg}
+                        alt="A Korean Odyssey"
+                        className="fav-img"
+                      />
                       <div>
                         <strong>A Korean Odyssey</strong>
-                        <p className="mb-0 text-muted">Serie // Drama // 2017</p>
+                        <p className="mb-0 text-muted">
+                          Serie // Drama // 2017
+                        </p>
                       </div>
                     </li>
                     <li>
-                      <img src={hometownImg} alt="Hometown Cha-Cha-Cha" className="fav-img" />
+                      <img
+                        src={hometownImg}
+                        alt="Hometown Cha-Cha-Cha"
+                        className="fav-img"
+                      />
                       <div>
                         <strong>Hometown Cha-Cha-Cha</strong>
-                        <p className="mb-0 text-muted">Serie // Romance // 2021</p>
+                        <p className="mb-0 text-muted">
+                          Serie // Romance // 2021
+                        </p>
                       </div>
                     </li>
                   </ul>
@@ -325,32 +387,49 @@ export default function Victoria() {
               <div className="card h-100 shadow">
                 <div className="card-body">
                   <h4 className="card-title text-primary mb-4">
-                    <i className="bi bi-music-note-beamed me-2"></i>Música Favorita
+                    <i className="bi bi-music-note-beamed me-2"></i>Música
+                    Favorita
                   </h4>
                   <ul className="favorites-list">
                     <li>
-                      <img src={virginImg} alt="Lorde Virgin" className="fav-img" />
+                      <img
+                        src={virginImg}
+                        alt="Lorde Virgin"
+                        className="fav-img"
+                      />
                       <div>
                         <strong>Lorde - Virgin</strong>
                         <p className="mb-0 text-muted">Álbum // 2025</p>
                       </div>
                     </li>
                     <li>
-                      <img src={melodramaImg} alt="Lorde Melodrama" className="fav-img" />
+                      <img
+                        src={melodramaImg}
+                        alt="Lorde Melodrama"
+                        className="fav-img"
+                      />
                       <div>
                         <strong>Lorde - Melodrama</strong>
                         <p className="mb-0 text-muted">Álbum // 2017</p>
                       </div>
                     </li>
                     <li>
-                      <img src={speaknowImg} alt="Speak Now" className="fav-img" />
+                      <img
+                        src={speaknowImg}
+                        alt="Speak Now"
+                        className="fav-img"
+                      />
                       <div>
                         <strong>Taylor Swift - Speak Now</strong>
                         <p className="mb-0 text-muted">Álbum // 2010</p>
                       </div>
                     </li>
                     <li>
-                      <img src={oysterImg} alt="Chloe Moriondo" className="fav-img" />
+                      <img
+                        src={oysterImg}
+                        alt="Chloe Moriondo"
+                        className="fav-img"
+                      />
                       <div>
                         <strong>Chloe Moriondo - oyster</strong>
                         <p className="mb-0 text-muted">Álbum // 2025</p>
@@ -377,10 +456,27 @@ export default function Victoria() {
                 <div className="text-center">
                   <small>Otros integrantes:</small>
                   <div className="mt-2">
-                    <a href="/lucas" className="btn btn-sm btn-outline-light me-2">Lucas</a>
-                    <a href="/sebastian" className="btn btn-sm btn-outline-light me-2">Sebastian</a>
-                    <a href="/estiven" className="btn btn-sm btn-outline-light me-2">Estiven</a>
-                    <a href="/jose" className="btn btn-sm btn-outline-light">Jose</a>
+                    <a
+                      href="/lucas"
+                      className="btn btn-sm btn-outline-light me-2"
+                    >
+                      Lucas
+                    </a>
+                    <a
+                      href="/sebastian"
+                      className="btn btn-sm btn-outline-light me-2"
+                    >
+                      Sebastian
+                    </a>
+                    <a
+                      href="/estiven"
+                      className="btn btn-sm btn-outline-light me-2"
+                    >
+                      Estiven
+                    </a>
+                    <a href="/jose" className="btn btn-sm btn-outline-light">
+                      Jose
+                    </a>
                   </div>
                 </div>
 
@@ -392,29 +488,6 @@ export default function Victoria() {
           </div>
         </div>
       </section>
-
-      {/* 🦶 Footer */}
-      <footer className="bg-dark text-white py-4">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-6">
-              <h5>Victoria</h5>
-              <p className="mb-0">Diseñadora UX UI</p>
-            </div>
-            <div className="col-md-6 text-md-end">
-              <p className="mb-0">
-                <i className="bi bi-envelope me-1"></i>
-                victoriadev@gmail.com
-              </p>
-              <div className="mt-2">
-                <button className="btn btn-outline-light btn-sm" onClick={() => scrollSuave('top')}>
-                  <i className="bi bi-arrow-up"></i> Volver arriba
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

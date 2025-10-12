@@ -1,17 +1,31 @@
 import { useEffect, useState } from "react";
 import "../css/styles.css";
-import heroVideo from "../assets/hero-bg.mp4"; 
+import heroVideo from "../assets/hero-bg.mp4";
 import lucasImg from "../assets/lucas_perfil.png";
 import victoriaImg from "../assets/victoria-ind.png";
 import sebastianImg from "../assets/sebastian-perfil.webp";
 import joseImg from "../assets/jose.png";
 import estivenImg from "../assets/est-avatar.png";
+import favicon from "../assets/favicon.png";
 
 export default function Home() {
   const [clima, setClima] = useState(null);
 
   // --- Llamada a API de clima ---
   useEffect(() => {
+    const link = document.createElement("link");
+    const title = document.createElement("title");
+    title.textContent = "Equipo Innovador - Inicio";
+    document.head.appendChild(title);
+    link.rel = "icon";
+    link.href = favicon;
+    document.head.appendChild(link);
+
+    return () => {
+      document.head.removeChild(link);
+      document.head.removeChild(title);
+    };
+
     async function fetchClima() {
       try {
         const res = await fetch(
@@ -32,24 +46,53 @@ export default function Home() {
   }, []);
 
   const integrantes = [
-    { nombre: "Lucas", img: lucasImg, ubicacion: "Villa Devoto, CABA", descripcion: "Me encanta la tecnología, el desarrollo de software, los juegos, pasar tiempo en familia y el fútbol.", skills: ["HTML", "CSS", "JavaScript", "C#"] },
-    { nombre: "Victoria", img: victoriaImg, ubicacion: "Buenos Aires, Argentina", descripcion: "Diseñadora multimedia especializada en UX/UI. Me apasiona transformar ideas en productos digitales.", skills: ["Figma", "Adobe Suite", "HTML", "JavaScript"] },
-    { nombre: "Sebastián", img: sebastianImg, ubicacion: "Mendoza, Argentina", descripcion: "Administrador de redes especializado en infraestructura TI y seguridad de redes.", skills: ["Mikrotik", "Python", "PHP", "Firewall"] },
-    { nombre: "Jose", img: joseImg, ubicacion: "???", descripcion: "Estudiante de desarrollo de software, web y de creación de videojuegos.", skills: ["HTML", "Python", "Flask", "Godot", "Maya", "Blender"] },
-    { nombre: "Estiven", img: estivenImg, ubicacion: "Buenos Aires, Argentina", descripcion: "Desarrollador de software especializado en e-commerce y aplicaciones web.", skills: ["NodeJS", "MySQL", "Express", "NestJS"] }
+    {
+      nombre: "Lucas",
+      img: lucasImg,
+      ubicacion: "Villa Devoto, CABA",
+      descripcion:
+        "Me encanta la tecnología, el desarrollo de software, los juegos, pasar tiempo en familia y el fútbol.",
+      skills: ["HTML", "CSS", "JavaScript", "C#"],
+    },
+    {
+      nombre: "Victoria",
+      img: victoriaImg,
+      ubicacion: "Buenos Aires, Argentina",
+      descripcion:
+        "Diseñadora multimedia especializada en UX/UI. Me apasiona transformar ideas en productos digitales.",
+      skills: ["Figma", "Adobe Suite", "HTML", "JavaScript"],
+    },
+    {
+      nombre: "Sebastián",
+      img: sebastianImg,
+      ubicacion: "Mendoza, Argentina",
+      descripcion:
+        "Administrador de redes especializado en infraestructura TI y seguridad de redes.",
+      skills: ["Mikrotik", "Python", "PHP", "Firewall"],
+    },
+    {
+      nombre: "Jose",
+      img: joseImg,
+      ubicacion: "???",
+      descripcion:
+        "Estudiante de desarrollo de software, web y de creación de videojuegos.",
+      skills: ["HTML", "Python", "Flask", "Godot", "Maya", "Blender"],
+    },
+    {
+      nombre: "Estiven",
+      img: estivenImg,
+      ubicacion: "Buenos Aires, Argentina",
+      descripcion:
+        "Desarrollador de software especializado en e-commerce y aplicaciones web.",
+      skills: ["NodeJS", "MySQL", "Express", "NestJS"],
+    },
   ];
 
   return (
     <div className="home trama">
       {/* Hero Section */}
       <section className="hero" style={{ backgroundColor: "#111" }}>
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="hero-video"
-        >
+        <video autoPlay muted loop playsInline className="hero-video">
           <source src={heroVideo} type="video/mp4" />
           Tu navegador no soporta video en HTML5.
         </video>
@@ -79,25 +122,35 @@ export default function Home() {
       {/* Sección del Equipo */}
       <section id="equipo" className="py-5">
         <div className="container text-center">
-          <h2 className="display-5 fw-bold text-primary mb-3">Nuestro Equipo</h2>
+          <h2 className="display-5 fw-bold text-primary mb-3">
+            Nuestro Equipo
+          </h2>
           <p className="lead text-muted mb-5">
-            Conoce a los integrantes de nuestro equipo y descubre sus habilidades e intereses.
+            Conoce a los integrantes de nuestro equipo y descubre sus
+            habilidades e intereses.
           </p>
 
           <div className="row g-4">
             {integrantes.map((integrante, i) => (
               <div key={i} className="col-lg-4 col-md-6">
                 <div className="card h-100">
-                  <img src={integrante.img} className="card-img-top" alt={integrante.nombre} />
+                  <img
+                    src={integrante.img}
+                    className="card-img-top"
+                    alt={integrante.nombre}
+                  />
                   <div className="card-body text-center">
                     <h5 className="card-title">{integrante.nombre}</h5>
                     <p className="text-muted mb-3">
-                      <i className="bi bi-geo-alt-fill me-1"></i>{integrante.ubicacion}
+                      <i className="bi bi-geo-alt-fill me-1"></i>
+                      {integrante.ubicacion}
                     </p>
                     <p className="card-text">{integrante.descripcion}</p>
                     <div className="skills-list mb-3">
                       {integrante.skills.map((s, j) => (
-                        <span key={j} className="skill-tag">{s}</span>
+                        <span key={j} className="skill-tag">
+                          {s}
+                        </span>
                       ))}
                     </div>
                   </div>
@@ -115,27 +168,6 @@ export default function Home() {
           <p className="lead">{clima || "Cargando clima..."}</p>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-dark text-white py-4">
-        <div className="container d-flex flex-column flex-md-row justify-content-between align-items-center">
-          <div>
-            <h5>Equipo Innovador - Grupo 9</h5>
-            <p className="mb-0">Desarrollando el futuro, una línea de código a la vez.</p>
-          </div>
-          <div className="text-md-end mt-3 mt-md-0">
-            <p className="mb-0">
-              <i className="bi bi-calendar-event me-1"></i> © 2025 - Proyecto de Desarrollo Web
-            </p>
-            <button
-              className="btn btn-outline-light btn-sm mt-2"
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            >
-              <i className="bi bi-arrow-up"></i> Volver arriba
-            </button>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
