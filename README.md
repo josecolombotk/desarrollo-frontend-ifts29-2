@@ -1,5 +1,4 @@
- Proyecto SPA React – Desarrollo Frontend IFTS N°29
- 
+  `````
 Carrera: Técnico Superior en Desarrollo de Software
 Materia: Desarrollo Frontend
 Profesor:  LUCIANO ARIEL MARTINEZ
@@ -24,6 +23,15 @@ El objetivo principal es transformar un sitio web estático en una aplicación m
 -  Componentes reutilizables y organizados por secciones (Home, Bitácora, Integrantes, Victoria, etc.).  
 -  Diseño responsive con **Bootstrap** y CSS personalizado.  
 -  Configuración optimizada con **Vite** para desarrollo rápido.
+
+ Estructura del proyecto
+src/
+├── assets/ # Imágenes, videos y recursos multimedia
+├── components/ # Componentes reutilizables (Navbar, Footer, etc.)
+├── pages/ # Páginas principales (Home, Bitacora, Victoria, etc.)
+├── css/ # Estilos CSS personalizados
+├── App.jsx # Enrutamiento principal de la SPA
+└── main.jsx # Punto de entrada
 
 
 Tecnologías utilizadas
@@ -62,11 +70,4 @@ Objetivos del proyecto
 -Practicar control de versiones con Git y GitHub.
 
 
-  `````Estructura del proyecto
-src/
-├── assets/ # Imágenes, videos y recursos multimedia
-├── components/ # Componentes reutilizables (Navbar, Footer, etc.)
-├── pages/ # Páginas principales (Home, Bitacora, Victoria, etc.)
-├── css/ # Estilos CSS personalizados
-├── App.jsx # Enrutamiento principal de la SPA
-└── main.jsx # Punto de entrada 
+
