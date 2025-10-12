@@ -34,14 +34,14 @@ Tecnologías utilizadas
 | React Router DOM | Manejo de rutas en la SPA |
 
 
- Estructura del proyecto
+  `````Estructura del proyecto
 src/
 ├── assets/ # Imágenes, videos y recursos multimedia
 ├── components/ # Componentes reutilizables (Navbar, Footer, etc.)
 ├── pages/ # Páginas principales (Home, Bitacora, Victoria, etc.)
 ├── css/ # Estilos CSS personalizados
 ├── App.jsx # Enrutamiento principal de la SPA
-└── main.jsx # Punto de entrada
+└── main.jsx # Punto de entrada `````
 
  
 API del Clima
