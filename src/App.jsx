@@ -3,7 +3,7 @@ import { Routes, Route, Outlet } from "react-router-dom";
 
 // 1. Importar componentes de layout
 import Sidebar from "./components/sidebar/Sidebar";
-import Footer from "./components/footer/Footer";
+import Footer from "./components/footer/Footer.jsx";
 
 // 2. Importar los componentes de las páginas
 import HomePage from "./pages/Home";
@@ -21,11 +21,12 @@ const Layout = () => {
     <div style={{ display: "flex" }}>
       <Sidebar />
       <div
+        className="main-content"
         style={{
           display: "flex",
           flexDirection: "column",
           width: "100%",
-          marginLeft: "250px", // Este margen es clave para no quedar debajo del Sidebar
+          //marginLeft: "250px", // Este margen es clave para no quedar debajo del Sidebar
           minHeight: "100vh", // Asegura que el layout ocupe al menos toda la altura de la pantalla
         }}
       >

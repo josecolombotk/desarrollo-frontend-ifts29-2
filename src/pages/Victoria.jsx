@@ -446,7 +446,7 @@ export default function Victoria() {
       </section>
 
       {/* 🔗 Navegación entre perfiles */}
-      <section className="py-4 bg-primary text-white">
+      <section className="mb-5 py-4 bg-primary text-white">
         <div className="container">
           <div className="row">
             <div className="col-12">

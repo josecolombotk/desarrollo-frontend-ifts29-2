@@ -1,0 +1,34 @@
+{
+  "integrantes": [
+    {
+      "id": "estiven",
+      "nombre": "Estiven",
+      "rol": "Desarrollador Full Stack",
+      "email": "estiven.dev@gmail.com"
+    },
+    {
+      "id": "jose",
+      "nombre": "Jose",
+      "rol": "Desarrollador & Game Developer",
+      "email": "jose.dev@gmail.com"
+    },
+    {
+      "id": "lucas",
+      "nombre": "Lucas",
+      "rol": "Desarrollador Frontend",
+      "email": "lucas.dev@gmail.com"
+    },
+    {
+      "id": "sebastian",
+      "nombre": "Sebastián",
+      "rol": "Administrador de Redes",
+      "email": "sebastian.dev@gmail.com"
+    },
+    {
+      "id": "victoria",
+      "nombre": "Victoria",
+      "rol": "Diseñadora UX/UI",
+      "email": "victoriadev@gmail.com"
+    }
+  ]
+}
