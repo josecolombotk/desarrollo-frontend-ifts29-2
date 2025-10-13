@@ -112,7 +112,24 @@ const Sidebar = () => {
                 Bitácora
               </NavLink>
             </li>
-            
+             <li>
+              <NavLink
+                to="/galeria"
+                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+                onClick={closeSidebar}
+              >
+                Galería
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/api"
+                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+                onClick={closeSidebar}
+              >
+                API Page
+              </NavLink>
+            </li>
             {/* Integrantes como enlaces directos */}
             {integrantes.map((integrante) => (
               <li key={integrante.id}>
