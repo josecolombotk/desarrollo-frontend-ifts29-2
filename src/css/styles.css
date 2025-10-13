@@ -188,11 +188,11 @@ body.trama {
 
 /* Footer */
 footer {
-  background: var(--primary-color);
+  background: #0d1117;
   color: var(--white);
-  padding: 2rem 0;
+  padding: 0rem 0;
   text-align: left;
-  margin-top: 3rem;
+  
 }
 
 /* Animaciones */
