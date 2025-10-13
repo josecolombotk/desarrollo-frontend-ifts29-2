@@ -51,22 +51,27 @@ export default function Victoria() {
     }, 6000);
   };
 
-  // ✍️ Efecto "escribir nombre"
-  useEffect(() => {
-    const nombre = document.querySelector(".typing-effect");
-    if (!nombre) return;
-    const textoOriginal = "Victoria";
-    nombre.textContent = "";
-    let i = 0;
-    const typing = setInterval(() => {
-      if (i < textoOriginal.length) {
-        nombre.textContent += textoOriginal.charAt(i);
-        i++;
-      } else {
-        clearInterval(typing);
-      }
-    }, 100);
-  }, []);
+// ✍️ Efecto "escribir nombre"
+useEffect(() => {
+  const nombre = document.querySelector(".typing-effect");
+  if (!nombre) return;
+  
+  const textoOriginal = "Victoria";
+  nombre.textContent = ""; // Limpiar antes de empezar
+  let i = 0;
+  
+  const typing = setInterval(() => {
+    if (i < textoOriginal.length) {
+      nombre.textContent += textoOriginal.charAt(i);
+      i++;
+    } else {
+      clearInterval(typing);
+    }
+  }, 100);
+  
+  // Cleanup function para limpiar el intervalo si el componente se desmonta
+  return () => clearInterval(typing);
+}, []);
 
   // Inicializar carousel
   useEffect(() => {
