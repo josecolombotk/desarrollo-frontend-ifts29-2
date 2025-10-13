@@ -24,6 +24,7 @@ export default function Victoria() {
   const carouselRef = useRef(null);
   const pageContainerRef = useRef(null); // 1. Referencia para el contenedor principal
 
+  
   // 🧚🏻‍♀️ Animación de corazones
   const mostrarCodigoEjemplo = () => {
     for (let i = 0; i < 20; i++) {
@@ -451,23 +452,23 @@ export default function Victoria() {
           <div className="row">
             <div className="col-12">
               <div className="d-flex justify-content-between align-items-center">
-                <a href="/lucas" className="btn btn-outline-light">
+                <Link to="/integrantes/sebastian" className="btn btn-outline-light">
                   <i className="bi bi-arrow-left me-1"></i>Perfil anterior
-                </a>
+                </Link>
 <div className="text-center">
   <small>Otros integrantes:</small>
   <div className="mt-2">
-    <Link to="/lucas" className="btn btn-sm btn-outline-light me-2">Lucas</Link>
-    <Link to="/sebastian" className="btn btn-sm btn-outline-light me-2">Sebastian</Link>
-    <Link to="/estiven" className="btn btn-sm btn-outline-light me-2">Estiven</Link>
-    <Link to="/jose" className="btn btn-sm btn-outline-light">Jose</Link>
+    <Link to="/integrantes/lucas" className="btn btn-sm btn-outline-light me-2">Lucas</Link>
+    <Link to="/integrantes/sebastian" className="btn btn-sm btn-outline-light me-2">Sebastian</Link>
+    <Link to="/integrantes/estiven" className="btn btn-sm btn-outline-light me-2">Estiven</Link>
+    <Link to="/integrantes/jose" className="btn btn-sm btn-outline-light">Jose</Link>
   </div>
 </div>
 
 
-                <a href="/sebastian" className="btn btn-outline-light">
+                <Link to="/integrantes/estiven" className="btn btn-outline-light">
                   Siguiente perfil<i className="bi bi-arrow-right ms-1"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
