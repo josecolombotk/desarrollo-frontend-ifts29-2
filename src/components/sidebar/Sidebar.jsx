@@ -118,7 +118,7 @@ const Sidebar = () => {
                 className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
                 onClick={closeSidebar}
               >
-                Galería
+                Ideas de Proyectos
               </NavLink>
             </li>
             <li>
@@ -130,6 +130,12 @@ const Sidebar = () => {
                 API Page
               </NavLink>
             </li>
+
+            {/* Divisor */}
+            <li style={dividerContainerStyles}>
+              <div style={dividerStyles}></div>
+            </li>
+
             {/* Integrantes como enlaces directos */}
             {integrantes.map((integrante) => (
               <li key={integrante.id}>
@@ -227,6 +233,16 @@ const closeBtnStyles = {
   alignItems: 'center',
   justifyContent: 'center',
   zIndex: 1060
+};
+
+const dividerContainerStyles = {
+  margin: '15px 0',
+  padding: '0 20px'
+};
+
+const dividerStyles = {
+  borderTop: '1px solid rgba(255, 255, 255, 0.2)',
+  width: '100%'
 };
 
 export default Sidebar;

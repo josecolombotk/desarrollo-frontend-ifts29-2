@@ -134,18 +134,8 @@ export default function GaleriaJsonPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="galeria-footer">
-        <div className="container text-center">
-          <p className="mb-0">© 2025 Equipo Innovador - Todos los derechos reservados</p>
-          <button 
-            className="btn-volver-arriba"
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          >
-            <i className="bi bi-arrow-up-circle-fill"></i>
-          </button>
-        </div>
-      </footer>
+
+      
     </div>
   );
 }
