@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Carousel } from "bootstrap";
-import "../css/jose.css"; // solo para este componente
+import "../css/jose.css"; 
 import joseImg from "../assets/jose.png";
 import juego1Img from "../assets/juego1.png";
 import juego2Img from "../assets/juego2.png";

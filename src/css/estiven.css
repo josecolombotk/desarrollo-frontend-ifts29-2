@@ -3,9 +3,7 @@
   min-height: 100vh;
 }
 
-/* Estilos específicos para la página de Estiven */
 
-/* Carrusel personalizado */
 .estiven-page-container .custom-carousel {
   border-radius: 15px;
   overflow: hidden;
@@ -47,7 +45,6 @@
   min-height: 350px;
 }
 
-/* Estilos específicos para el layout horizontal de películas */
 .estiven-page-container .custom-carousel .carousel-item .d-flex {
   min-height: 350px;
   align-items: center;
@@ -115,7 +112,6 @@
   opacity: 0.9;
 }
 
-/* Controles del carrusel */
 .estiven-page-container .custom-carousel .carousel-control-prev,
 .estiven-page-container .custom-carousel .carousel-control-next {
   width: 50px;
@@ -149,7 +145,6 @@
   height: 20px;
 }
 
-/* Indicadores del carrusel */
 .estiven-page-container .custom-carousel .carousel-indicators {
   bottom: 15px;
 }
@@ -169,7 +164,6 @@
   transform: scale(1.2);
 }
 
-/* Títulos de sección */
 .estiven-page-container .section-title {
   position: relative;
   text-align: center;
@@ -192,7 +186,6 @@
   background: linear-gradient(90deg, #f093fb, #f5576c);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .estiven-page-container .carousel-content {
     flex-direction: column;
@@ -235,7 +228,6 @@
   }
 }
 
-/* Estilos adicionales específicos para Estiven */
 
 /* Carrusel 3D de Música */
 .estiven-page-container .carousel-3d-container {

@@ -1,7 +1,5 @@
-/* Importar Google Fonts para la página de Lucas */
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Uncial+Antiqua&display=swap");
 
-/* Variables de color de la paleta de Game of Thrones */
 :root {
   --primary-color: #b8860b;
   --secondary-color: #607d8b;
@@ -14,16 +12,15 @@
   --border-radius: 8px;
 }
 
-/* Contenedor principal de la página de Lucas con el fondo */
+/* Contenedor principal con el fondo */
 .lucas-page-container {
   background-image: url("../assets/lucas_background.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-color: var(--dark-bg);
-  /* Nueva fuente para el cuerpo del texto */
   font-family: "Cormorant Garamond", serif;
-  min-height: 100vh; /* Asegura que el contenedor ocupe toda la altura */
+  min-height: 100vh; 
 }
 
 /* Estilo de la tarjeta del perfil */
@@ -48,7 +45,6 @@
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3) !important;
 }
 
-/* Nombres y títulos */
 .lucas-page-container .text-primary {
   color: var(--primary-color) !important;
 }
@@ -56,13 +52,12 @@
 .lucas-page-container h2,
 .lucas-page-container h3,
 .lucas-page-container h4 {
-  /* Nueva fuente para los títulos */
   font-family: "Uncial Antiqua", cursive;
 }
 
 .lucas-page-container .text-muted {
   color: var(--primary-color) !important;
-  font-size: 1.3rem; /* Ajustar tamaño de fuente para que no sea tan grande */
+  font-size: 1.3rem; 
 }
 
 .lucas-page-container #slogan-display {
@@ -162,7 +157,7 @@
   background-color: var(--dark-bg) !important;
 }
 
-/* Asegurar que los textos dentro de las tarjetas de favoritos usen la fuente correcta */
+/* Asegura que los textos dentro de las tarjetas de favoritos usen la fuente correcta */
 .lucas-page-container .card .card-body p {
   font-family: "Cormorant Garamond", serif;
   color: var(--text-color);

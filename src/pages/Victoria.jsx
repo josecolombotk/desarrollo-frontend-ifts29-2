@@ -40,7 +40,7 @@ export default function Victoria() {
     const originalIcon = link.href;
     link.href = favicon;
 
-    // Cleanup: restaurar valores originales
+    // restaurar valores originales
     return () => {
       document.title = originalTitle;
       if (originalIcon) {
@@ -49,7 +49,7 @@ export default function Victoria() {
     };
   }, []);
 
-  // 🧚🏻‍♀️ Función de animación de corazones
+  // Función de animación de corazones
   const crearCorazon = () => {
     if (!pageContainerRef.current) return;
 
@@ -75,7 +75,7 @@ export default function Victoria() {
     }
   };
 
-  // ✍️ Efecto "escribir nombre"
+  // Efecto "escribir nombre"
   useEffect(() => {
     const nombre = document.querySelector(".typing-effect");
     if (!nombre) return;
@@ -192,7 +192,7 @@ export default function Victoria() {
         </div>
       </section>
 
-      {/* 🎨 Showcase de Proyectos */}
+      {/* Showcase de Proyectos */}
       <section className="py-5">
         <div className="container">
           <div className="row">
@@ -345,7 +345,7 @@ export default function Victoria() {
         </div>
       </section>
 
-      {/* 📚 Sección de Favoritos */}
+      {/* Sección de Favoritos */}
       <section className="py-5">
         <div className="container">
           <div className="row">
@@ -474,7 +474,7 @@ export default function Victoria() {
         </div>
       </section>
 
-      {/* 🔗 Navegación entre perfiles */}
+      {/*  Navegación entre perfiles */}
       <section className="mb-5 py-4 bg-primary text-white">
         <div className="container">
           <div className="row">

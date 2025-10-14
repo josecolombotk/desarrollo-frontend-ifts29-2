@@ -22,7 +22,7 @@ const Sidebar = () => {
     const checkMobile = () => {
       const mobile = window.innerWidth <= 991;
       setIsMobile(mobile);
-      // Si cambia a desktop, asegurar que el sidebar esté abierto
+      // Si cambia a desktop, asegura que el sidebar esté abierto
       if (!mobile) {
         setIsSidebarOpen(true);
       } else {

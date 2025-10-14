@@ -5,7 +5,7 @@ export default function ApiPage() {
   const [weather, setWeather] = useState("Cargando clima...");
 
   useEffect(() => {
-    // Coordenadas de Buenos Aires (puedes cambiar a cualquier ciudad)
+    // Coordenadas de Buenos Aires 
     const lat = -34.61;
     const lon = -58.38;
 
