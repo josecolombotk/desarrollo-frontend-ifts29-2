@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "../css/apipage.css";
 
 export default function ApiPage() {
   const [weatherData, setWeatherData] = useState([]);
@@ -82,214 +83,56 @@ export default function ApiPage() {
     return { background: "linear-gradient(135deg, #F3F4F6 0%, #E5E7EB 100%)" };
   }
 
-  const styles = `
-    .weather-dashboard {
-      min-height: 100vh;
-      background: linear-gradient(135deg, #EFF6FF 0%, #E0E7FF 50%, #F3E8FF 100%);
-      padding: 3rem 1rem;
-    }
-
-    .dashboard-header {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    .dashboard-title {
-      font-size: 3rem;
-      font-weight: 800;
-      color: #1F2937;
-      margin-bottom: 1rem;
-    }
-
-    .dashboard-subtitle {
-      font-size: 1.25rem;
-      color: #6B7280;
-    }
-
-    .cards-container {
-      max-width: 1400px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1rem;
-      padding: 0 1rem;
-    }
-
-    @media (min-width: 1024px) {
-      .cards-container {
-        grid-template-columns: repeat(5, 1fr);
-      }
-    }
-
-    @media (min-width: 768px) and (max-width: 1023px) {
-      .cards-container {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    .weather-card {
-      border-radius: 1rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      padding: 1.5rem;
-      transition: all 0.3s ease;
-    }
-
-    .weather-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
-    }
-
-    .dev-name {
-      font-size: 1.125rem;
-      font-weight: 600;
-      color: #1F2937;
-      margin-bottom: 0.25rem;
-    }
-
-    .dev-location {
-      font-size: 0.875rem;
-      color: #6B7280;
-      margin-bottom: 1.5rem;
-    }
-
-    .weather-icon {
-      font-size: 4rem;
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-
-    .temperature {
-      font-size: 3rem;
-      font-weight: 700;
-      color: #1F2937;
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-
-    .weather-description {
-      background: rgba(255, 255, 255, 0.5);
-      border-radius: 0.5rem;
-      padding: 0.75rem;
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-
-    .weather-description-text {
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: #374151;
-    }
-
-    .wind-info {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.875rem;
-      color: #6B7280;
-    }
-
-    .wind-icon {
-      margin-right: 0.25rem;
-    }
-
-    .loading-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 16rem;
-    }
-
-    .spinner {
-      border: 4px solid #E5E7EB;
-      border-top: 4px solid #3B82F6;
-      border-radius: 50%;
-      width: 4rem;
-      height: 4rem;
-      animation: spin 1s linear infinite;
-    }
-
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-    .footer-text {
-      text-align: center;
-      margin-top: 3rem;
-      font-size: 0.875rem;
-      color: #9CA3AF;
-    }
-
-    @media (max-width: 768px) {
-      .dashboard-title {
-        font-size: 2rem;
-      }
-
-      .dashboard-subtitle {
-        font-size: 1rem;
-      }
-
-      .cards-container {
-        grid-template-columns: 1fr;
-      }
-    }
-  `;
-
   return (
-    <>
-      <style>{styles}</style>
-      <div className="weather-dashboard">
-        <div className="dashboard-header">
-          <h1 className="dashboard-title">
-            Nuestros Climas
-          </h1>
-          <p className="dashboard-subtitle">
-            Condiciones meteorológicas actuales en las ubicaciones de nuestros desarrolladores
-          </p>
+    <div className="weather-dashboard">
+      <section className="api-header">
+        <div className="container">
+          <h1>Nuestros Climas</h1>
+          <p>Condiciones meteorológicas actuales en las ubicaciones de nuestros desarrolladores</p>
         </div>
+      </section>
 
-        {loading ? (
-          <div className="loading-container">
-            <div className="spinner"></div>
-          </div>
-        ) : (
-          <div className="cards-container">
-            {weatherData.map((dev, index) => (
-              <div
-                key={index}
-                className="weather-card"
-                style={getCardStyle(dev.code)}
-              >
-                <h3 className="dev-name">{dev.name}</h3>
-                <p className="dev-location">{dev.city}, {dev.province}</p>
+      {loading ? (
+        <div className="loading-container">
+          <div className="spinner"></div>
+        </div>
+      ) : (
+        <div className="cards-container">
+          {weatherData.map((dev, index) => (
+            <div
+              key={index}
+              className="weather-card"
+              style={getCardStyle(dev.code)}
+            >
+              <h3 className="dev-name">{dev.name}</h3>
+              <p className="dev-location">{dev.city}, {dev.province}</p>
 
-                <div className="weather-icon">
-                  {getWeatherIcon(dev.code)}
-                </div>
-
-                <div className="temperature">
-                  {Math.round(dev.temp)}°C
-                </div>
-
-                <div className="weather-description">
-                  <p className="weather-description-text">
-                    {getWeatherDescription(dev.code)}
-                  </p>
-                </div>
-
-                <div className="wind-info">
-                  <span className="wind-icon">💨</span>
-                  <span>Viento: {dev.windSpeed} km/h</span>
-                </div>
+              <div className="weather-icon">
+                {getWeatherIcon(dev.code)}
               </div>
-            ))}
-          </div>
-        )}
 
-        <p className="footer-text">
-          Datos provistos por Open-Meteo API • Actualizado en tiempo real
-        </p>
-      </div>
-    </>
+              <div className="temperature">
+                {Math.round(dev.temp)}°C
+              </div>
+
+              <div className="weather-description">
+                <p className="weather-description-text">
+                  {getWeatherDescription(dev.code)}
+                </p>
+              </div>
+
+              <div className="wind-info">
+                <span className="wind-icon">💨</span>
+                <span>Viento: {dev.windSpeed} km/h</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      <p className="footer-text">
+        Datos provistos por Open-Meteo API • Actualizado en tiempo real
+      </p>
+    </div>
   );
 }

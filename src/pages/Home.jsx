@@ -167,15 +167,7 @@ useEffect(() => {
         </div>
       </section>
 
-      {/* Sección de clima */}
-      <section className="py-5 bg-light text-center">
-        <div className="container">
-          <h4 className="mb-3 text-primary">Clima actual en Buenos Aires 🌤️</h4>
-          <p className="lead" style={{ color: "#0d6efd", fontWeight: "bold" }}>
-      {clima || "Cargando clima..."}
-          </p>
-        </div>
-      </section>
+      
     </div>
   );
 }
