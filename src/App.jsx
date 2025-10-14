@@ -10,8 +10,9 @@ import HomePage from "./pages/Home";
 import BitacoraPage from "./pages/Bitacora";
 import IntegrantePage from "./pages/IntegrantePage";
 // (Aquí importarías las nuevas páginas cuando las crees)
-import Galeria from './pages/GaleriaJsonPage';
+import Galeria from "./pages/GaleriaJsonPage";
 // import ApiPage from './pages/ApiPage';
+import ApiPage from "./pages/ApiPage";
 
 // --- Componente Layout ---
 // Este componente define la estructura visual que se repetirá en todas las páginas:
@@ -30,9 +31,7 @@ const Layout = () => {
           minHeight: "100vh", // Asegura que el layout ocupe al menos toda la altura de la pantalla
         }}
       >
-        <main
-          style={{ flex: "1 0 auto"}}
-        >
+        <main style={{ flex: "1 0 auto" }}>
           {/* Outlet es el marcador de posición donde React Router renderizará la página actual */}
           <Outlet />
         </main>
@@ -50,7 +49,8 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
         <Route path="bitacora" element={<BitacoraPage />} />
-         <Route path="/galeria" element={<Galeria />} />
+        <Route path="/galeria" element={<Galeria />} />
+        <Route path="/api" element={<ApiPage />} />
 
         {/* La ruta vuelve a ser como al principio */}
         <Route path="integrantes/:id" element={<IntegrantePage />} />
