@@ -97,7 +97,7 @@ useEffect(() => {
   return (
     <div className="home trama">
       {/* Hero Section */}
-      <section className="hero" style={{ backgroundColor: "#111" }}>
+      <section className="hero" style={{ background: "linear-gradient(135deg, #EFF6FF 0%, #E0E7FF 50%, #F3E8FF 100%)" }}>
         <video autoPlay muted loop playsInline className="hero-video">
           <source src={heroVideo} type="video/mp4" />
           Tu navegador no soporta video en HTML5.

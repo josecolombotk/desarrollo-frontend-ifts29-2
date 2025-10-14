@@ -23,11 +23,11 @@ body {
   font-family: "Poppins", sans-serif;
   line-height: 1.6;
   color: var(--text-color);
-  background-color: var(--light-bg);
+  background-color: linear-gradient(135deg, #EFF6FF 0%, #E0E7FF 50%, #F3E8FF 100%) !important;
 }
 
 body.trama {
-  background-image: linear-gradient(135deg, #f5f7fa 0%, #8cace1 100%);
+  background-color: linear-gradient(135deg, #EFF6FF 0%, #E0E7FF 50%, #F3E8FF 100%);
 }
 
 /* Header y navegación */

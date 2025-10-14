@@ -13,7 +13,7 @@
 
 .galeria-container {
   min-height: 100vh;
-  background: black;
+  background: linear-gradient(135deg, #EFF6FF 0%, #E0E7FF 50%, #F3E8FF 100%);
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
