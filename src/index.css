@@ -7,9 +7,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  /* Colores base para el modo oscuro */
-  background-color: #121212; /* Un negro no tan puro, más suave a la vista */
-  color: #e0e0e0; 
+  background-color: linear-gradient(135deg, #EFF6FF 0%, #E0E7FF 50%, #F3E8FF 100%) !important;
+  color: #4f4f4f; 
 }
 
 /* Para que los títulos se vean más destacados */

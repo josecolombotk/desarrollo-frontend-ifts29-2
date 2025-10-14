@@ -127,7 +127,7 @@ const Sidebar = () => {
                 className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
                 onClick={closeSidebar}
               >
-                API Page
+                Nuestros Climas
               </NavLink>
             </li>
 
