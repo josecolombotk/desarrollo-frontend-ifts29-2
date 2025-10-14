@@ -275,7 +275,7 @@ export default function LucasPage() {
                 </Link>
 
                 <Link
-                  to="/integrantes/victoria"
+                  to="/integrantes/sebastian"
                   className="btn btn-outline-light"
                 >
                   Siguiente Hermano<i className="bi bi-arrow-right ms-1"></i>

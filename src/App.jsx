@@ -30,9 +30,7 @@ const Layout = () => {
           minHeight: "100vh", // Asegura que el layout ocupe al menos toda la altura de la pantalla
         }}
       >
-        <main
-          style={{ flex: "1 0 auto"}}
-        >
+        <main style={{ flex: "1 0 auto" }}>
           {/* Outlet es el marcador de posición donde React Router renderizará la página actual */}
           <Outlet />
         </main>
