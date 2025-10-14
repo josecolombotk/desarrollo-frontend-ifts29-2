@@ -48,8 +48,8 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
         <Route path="bitacora" element={<BitacoraPage />} />
-         <Route path="/galeria" element={<Galeria />} />
-         <Route path="/apipage" element={<ApiPage />} />
+         <Route path="galeria" element={<Galeria />} />
+         <Route path="apipage" element={<ApiPage />} />
 
         {/* La ruta vuelve a ser como al principio */}
         <Route path="integrantes/:id" element={<IntegrantePage />} />

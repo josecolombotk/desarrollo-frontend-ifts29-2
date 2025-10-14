@@ -123,7 +123,7 @@ const Sidebar = () => {
             </li>
             <li>
               <NavLink
-                to="/api"
+                to="/apipage"
                 className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
                 onClick={closeSidebar}
               >
