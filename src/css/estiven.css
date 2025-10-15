@@ -2,7 +2,7 @@
 .estiven-page {
   background: linear-gradient(to bottom right, #f5f7fa, #e4e9f0);
   min-height: 100vh;
-  color: #111; /* texto oscuro para fondo claro */
+  color: #111;
   padding: 3rem 1rem;
   font-family: "Poppins", sans-serif;
 }
@@ -81,7 +81,7 @@
     height: 140px;
   }
 }
-/* === Secciones de favoritos === */
+/* Secciones de favoritos  */
 .favorites-grid {
   display: flex;
   flex-wrap: wrap;

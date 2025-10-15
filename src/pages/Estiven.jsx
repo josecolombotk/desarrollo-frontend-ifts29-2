@@ -4,7 +4,6 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { Link } from "react-router-dom";
 import "../css/estiven.css";
 
-// Imágenes de perfil, películas y música
 import estivenImg from "../assets/est-avatar.png";
 import shelterMovie from "../assets/est-shelter-movie.png";
 import thamePoMovie from "../assets/est-thameypo-movie.webp";
@@ -32,7 +31,6 @@ const Estiven = () => {
             <div className="card-body p-5">
               <div className="row align-items-center">
                 <div className="col-lg-4 text-center mb-4 mb-lg-0">
-{/* Imagen con rotación */}
                   <img
                     src={estivenImg}
                     alt="Estiven"
@@ -90,7 +88,6 @@ const Estiven = () => {
         </div>
       </section>
 
-      {/* Favoritos */}
       <section className="py-5 bg-light favorites-section">
         <div className="container">
           <h3 className="text-center mb-5 text-primary">Mis Favoritos</h3>
@@ -205,7 +202,6 @@ const Estiven = () => {
         </div>
       </section>
 
-      {/* Navegación entre perfiles */}
       <section className="py-4 bg-primary text-white">
         <div className="container d-flex justify-content-between align-items-center">
           <Link to="/integrantes/jose" className="btn btn-outline-light">

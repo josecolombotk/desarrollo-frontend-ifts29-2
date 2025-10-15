@@ -1,6 +1,4 @@
-/* ======== FONDO DE PÁGINA ======== */
 .jose-page-container {
-  /* Gradiente animado violeta-azulado */
   background: linear-gradient(135deg, #6a11cb, #2575fc, #6a11cb);
   background-size: 400% 400%;
   animation: gradientAnimation 15s ease infinite;
@@ -10,20 +8,18 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* Animación del gradiente */
 @keyframes gradientAnimation {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* ======== TARJETA DE PERFIL ======== */
 .jose-page-container .profile-card {
   max-width: 95% !important;
   margin: 2rem auto;
   border-radius: 15px;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.1); /* semitransparente */
+  background: rgba(255, 255, 255, 0.1); 
   color: #fff;
   box-shadow: 0 8px 30px rgba(0,0,0,0.3);
   position: relative;
@@ -41,16 +37,14 @@
   z-index: 0;
 }
 
-/* Contenido de la tarjeta */
 .jose-page-container .profile-card .card-body {
   position: relative;
   z-index: 1;
   padding: 3rem;
-  background: rgba(0, 0, 0, 0.35); /* semi-transparente para contraste */
+  background: rgba(0, 0, 0, 0.35); 
   border-radius: 15px;
 }
 
-/* Columnas y texto */
 .jose-page-container .profile-card .col-lg-8 {
   flex: 0 0 100%;
   max-width: 100%;
@@ -66,10 +60,9 @@
 .jose-page-container .profile-card h2,
 .jose-page-container .profile-card h3,
 .jose-page-container .profile-card h4 {
-  color: #f1c40f; /* amarillo dorado */
+  color: #f1c40f; 
 }
 
-/* Imagen de perfil */
 .jose-page-container .profile-img {
   display: block;
   margin: 0 auto;
@@ -87,13 +80,12 @@
   transform: scale(1.05) rotate(5deg);
 }
 
-/* Centrando títulos y párrafos en tarjeta */
 .jose-page-container .card-body.text-center h2,
 .jose-page-container .card-body.text-center p {
   text-align: center;
 }
 
-/* ======== BOTONES ======== */
+/*== BOTONES == */
 .btn-outline-light {
   border-color: #f1c40f !important;
   color: #f1c40f !important;
@@ -105,7 +97,7 @@
   color: #000 !important;
 }
 
-/* ======== RESPONSIVE ======== */
+/* == RESPONSIVE == */
 @media (max-width: 992px) {
   .jose-page-container .profile-card .card-body {
     padding: 2rem;

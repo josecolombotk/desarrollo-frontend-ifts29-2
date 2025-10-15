@@ -311,7 +311,6 @@ export default function Jose() {
             </div>
           </div>
         </section>
-        {/*  Navegación entre perfiles */}
       <section className="mb-5 py-4 bg-primary text-white">
         <div className="container">
           <div className="row">
