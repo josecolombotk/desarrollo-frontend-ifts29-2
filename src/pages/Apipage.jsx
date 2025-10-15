@@ -88,7 +88,7 @@ export default function ApiPage() {
       <section className="api-header">
         <div className="container">
           <h1>Nuestros Climas</h1>
-          <p>Condiciones meteorológicas actuales en las ubicaciones de nuestros desarrolladores</p>
+          <p>Condiciones meteorológicas actuales en nuestras ubicaciones</p>
         </div>
       </section>
 

@@ -152,7 +152,7 @@ body.trama {
     #243949 51%,
     #517fa4 100%
   );
-  border: none;
+  border: none !important;
   border-radius: 15px;
   padding: 0.75rem 2rem;
   font-weight: 500;
@@ -169,8 +169,8 @@ body.trama {
 }
 
 .btn-outline-primary {
-  border: 2px solid var(--secondary-color);
-  color: var(--secondary-color);
+  border: 2px solid var(--white) !important;
+  color: var(--white) ;
   border-radius: 25px;
   padding: 0.75rem 2rem;
   font-weight: 500;
@@ -289,8 +289,8 @@ footer {
 }
 
 .skill-tag {
-  background: var(--secondary-color);
-  color: var(--white);
+  background: var(--white) !important;
+  color: black !important;
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
   font-size: 0.9rem;
@@ -499,3 +499,22 @@ footer {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.hero .btn-outline-light {
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+    background-color: transparent;
+}
+
+.hero .btn-outline-light:hover {
+    color: #243949 !important;
+    background-color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+.hero .btn-outline-light i {
+    color: #ffffff !important;
+}
+
+.hero .btn-outline-light:hover i {
+    color: #243949 !important;
+}
