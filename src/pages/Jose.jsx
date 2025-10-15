@@ -20,7 +20,7 @@ export default function Jose() {
     const title = document.createElement("title");
     link.rel = "icon";
     link.href = joseFavicon;
-    title.textContent = "José - Perfil";
+    document.title = "José - Perfil"; 
     document.head.appendChild(link);
     document.head.appendChild(title);
 

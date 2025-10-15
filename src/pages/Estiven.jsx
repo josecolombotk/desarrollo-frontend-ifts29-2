@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react"; 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { Link } from "react-router-dom";
 import "../css/estiven.css";
+import estivenFavicon from "../assets/est-favicon.png"; 
 
 import estivenImg from "../assets/est-avatar.png";
 import shelterMovie from "../assets/est-shelter-movie.png";
@@ -19,12 +20,23 @@ import youAreTheReasonSong from "../assets/est-you_are_the_reason-song.jpg";
 const Estiven = () => {
   const [rotation, setRotation] = useState(0);
 
+  useEffect(() => {
+    document.title = "Estiven - Perfil";
+
+    const link =
+      document.querySelector("link[rel~='icon']") ||
+      document.createElement("link");
+    link.rel = "icon";
+    link.href = estivenFavicon;
+    document.head.appendChild(link);
+  }, []); 
+
+  // Función para rotar imagen
   const rotarImagen = () => {
     setRotation(rotation + 90);
   };
   return (
     <div className="estiven-page">
-      {/* Perfil Principal */}
       <section className="py-5 mt-5">
         <div className="container">
           <div className="card profile-card shadow-lg">
