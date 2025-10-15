@@ -22,7 +22,7 @@ const Sidebar = () => {
     const checkMobile = () => {
       const mobile = window.innerWidth <= 991;
       setIsMobile(mobile);
-      // Si cambia a desktop, asegurar que el sidebar esté abierto
+      // Si cambia a desktop, asegura que el sidebar esté abierto
       if (!mobile) {
         setIsSidebarOpen(true);
       } else {
@@ -118,18 +118,24 @@ const Sidebar = () => {
                 className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
                 onClick={closeSidebar}
               >
-                Galería
+                Ideas de Proyectos
               </NavLink>
             </li>
             <li>
               <NavLink
-                to="/api"
+                to="/apipage"
                 className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
                 onClick={closeSidebar}
               >
-                API Page
+                Nuestros Climas
               </NavLink>
             </li>
+
+            {/* Divisor */}
+            <li style={dividerContainerStyles}>
+              <div style={dividerStyles}></div>
+            </li>
+
             {/* Integrantes como enlaces directos */}
             {integrantes.map((integrante) => (
               <li key={integrante.id}>
@@ -227,6 +233,16 @@ const closeBtnStyles = {
   alignItems: 'center',
   justifyContent: 'center',
   zIndex: 1060
+};
+
+const dividerContainerStyles = {
+  margin: '15px 0',
+  padding: '0 20px'
+};
+
+const dividerStyles = {
+  borderTop: '1px solid rgba(255, 255, 255, 0.2)',
+  width: '100%'
 };
 
 export default Sidebar;

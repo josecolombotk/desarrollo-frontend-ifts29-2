@@ -1,13 +1,12 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 
-// 1. Importa TODOS los componentes de las páginas de integrantes de forma estática
+// Importa TODOS los componentes de las páginas de integrantes de forma estática
 import LucasPage from './Lucas.jsx';
 import VictoriaPage from './Victoria.jsx';
 import EstivenPage from './Estiven.jsx';
 import SebastianPage from './Sebastian.jsx';
 import JosePage from './Jose.jsx';
-// import OtroIntegrantePage from './integrantes/otro.jsx'; // <-- Añadirías más aquí
 
 const PaginaNoEncontrada = () => (
   <div>
@@ -18,9 +17,9 @@ const PaginaNoEncontrada = () => (
 );
 
 const IntegrantePage = () => {
-  const { id } = useParams(); // Obtiene el 'id' de la URL
+  const { id } = useParams(); 
 
-  // 2. Decide qué componente renderizar basado en el 'id'
+  // Decide qué componente renderizar basado en el 'id'
   switch (id) {
     case 'lucas':
       return <LucasPage />;
@@ -33,7 +32,6 @@ const IntegrantePage = () => {
     case 'jose':
       return <JosePage />;
     default:
-      // Si el 'id' no coincide con ningún caso, muestra la página de no encontrado
       return <PaginaNoEncontrada />;
   }
 };

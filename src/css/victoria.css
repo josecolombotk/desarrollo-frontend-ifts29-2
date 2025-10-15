@@ -1,7 +1,4 @@
-/* Importar Bootstrap desde CDN */
 @import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css');
-
-/* Importar Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
 
 
@@ -29,7 +26,6 @@ html, body {
     overflow-x: hidden;
 }
 
-/* Fondo - ahora se aplica desde inline style en el componente */
 #top {
     background-size: cover !important;
     background-position: center !important;
@@ -51,7 +47,6 @@ body {
     border-radius: 20px !important;
 }
 
-/* SOLUCIÓN: Aplicar opacidad solo al fondo, no al contenido */
 .profile-card::before {
     content: '';
     position: absolute;
@@ -66,7 +61,6 @@ body {
 
 .profile-card {
     position: relative;
-    /* Quitar el opacity de aquí */
 }
 
 .card {
@@ -227,4 +221,37 @@ body {
 .victoria-page-container .btn-success.mt-2 {
     background-color: #B5759F !important;
     border-color: #B5759F !important;
+}
+
+
+/* Específicos para diferentes secciones */
+.victoria-page-container h1,
+.victoria-page-container h2,
+.victoria-page-container h3,
+.victoria-page-container h4,
+.victoria-page-container h5,
+.victoria-page-container h6 {
+    color: #B5759F !important;
+}
+
+/* Botones de navegación con borde y texto blanco */
+.victoria-page-container .bg-primary .btn-outline-light {
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+    background-color: transparent;
+}
+
+.victoria-page-container .bg-primary .btn-outline-light:hover {
+    color: #B5759F !important;
+    background-color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+/* Asegurar que los iconos también sean blancos */
+.victoria-page-container .bg-primary .btn-outline-light i {
+    color: #ffffff !important;
+}
+
+.victoria-page-container .bg-primary .btn-outline-light:hover i {
+    color: #B5759F !important;
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { Carousel } from "bootstrap";
-import "../css/jose.css"; // solo para este componente
+import "../css/jose.css"; 
 import joseImg from "../assets/jose.png";
 import juego1Img from "../assets/juego1.png";
 import juego2Img from "../assets/juego2.png";
@@ -19,7 +20,7 @@ export default function Jose() {
     const title = document.createElement("title");
     link.rel = "icon";
     link.href = joseFavicon;
-    title.textContent = "José - Perfil";
+    document.title = "José - Perfil"; 
     document.head.appendChild(link);
     document.head.appendChild(title);
 
@@ -163,7 +164,6 @@ export default function Jose() {
                       <span className="carousel-control-next-icon"></span>
                     </button>
                   </div>
-
                   <hr />
                   <p className="lead mb-0">
                     Al no tener mucho que agregar sobre mí, quisiera usar la
@@ -261,6 +261,76 @@ export default function Jose() {
                     </button>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        <section className="py-5">
+          <div className="container">
+            <div className="row g-4"> 
+              <div className="col-md-6"> 
+                <div className="card h-100 shadow bitacora-card">
+                  <div className="card-body">
+                    <h4 className="card-title text-warning mb-4">
+                      <i className="bi bi-film me-2"></i>Películas Favoritas
+                    </h4>
+                    <ul className="favorites-list mb-0">
+                      <li>
+                        <strong>Logan</strong>
+                        <p className="mb-0 text-muted">Una última aventura cruda y realista.</p>
+                      </li>
+                      <li>
+                        <strong>X-Men 2</strong>
+                        <p className="mb-0 text-muted">Una de las mejores historias del equipo.</p>
+                      </li>
+                      <li>
+                        <strong>Days of Future Past</strong>
+                        <p className="mb-0 text-muted">Viajes en el tiempo y decisiones imposibles.</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-md-6">
+                <div className="card h-100 shadow bitacora-card">
+                  <div className="card-body">
+                    <h4 className="card-title text-warning mb-4">
+                      <i className="bi bi-music-note-beamed me-2"></i>Playlist
+                    </h4>
+                    <ul className="favorites-list mb-0" id="lista-musica">
+                      <li><strong>La Renga - Montaña roja</strong></li>
+                      <li><strong>La Renga - Motor, alma y sangre</strong></li>
+                      <li><strong>La Renga - Cuando vendrán</strong></li>
+                      <li><strong>La Renga - En pie</strong></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      <section className="mb-5 py-4 bg-primary text-white">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="d-flex justify-content-between align-items-center">
+                <Link to="/integrantes/sebastian" className="btn btn-outline-light">
+                  <i className="bi bi-arrow-left me-1"></i>Perfil anterior
+                </Link>
+                <div className="text-center">
+                  <small>Otros integrantes:</small>
+                  <div className="mt-2">
+                    <Link to="/integrantes/lucas" className="btn btn-sm btn-outline-light me-2">Lucas</Link>
+                    <Link to="/integrantes/sebastian" className="btn btn-sm btn-outline-light me-2">Sebastian</Link>
+                    <Link to="/integrantes/estiven" className="btn btn-sm btn-outline-light me-2">Estiven</Link>
+                    <Link to="/integrantes/victoria" className="btn btn-sm btn-outline-light">Victoria</Link>
+                  </div>
+                </div>
+                <Link to="/integrantes/estiven" className="btn btn-outline-light">
+                  Siguiente perfil<i className="bi bi-arrow-right ms-1"></i>
+                </Link>
               </div>
             </div>
           </div>

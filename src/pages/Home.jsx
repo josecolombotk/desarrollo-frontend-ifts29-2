@@ -11,45 +11,77 @@ import favicon from "../assets/favicon.png";
 export default function Home() {
   const [clima, setClima] = useState(null);
 
-  // Llamada a API de clima
-useEffect(() => {
-  //  favicon y título dinámico
-  const link = document.createElement("link");
-  const title = document.createElement("title");
-  title.textContent = "Equipo Innovador - Inicio";
-  document.head.appendChild(title);
-  link.rel = "icon";
-  link.href = favicon;
-  document.head.appendChild(link);
+  // Implementación del Toast de bienvenida
+  const [showToast, setShowToast] = useState(false);
+  const [toastData, setToastData] = useState({ saludo: "", hora: "" });
 
-  // definimos la función y la ejecutamos 
-  async function fetchClima() {
-    try {
-      const res = await fetch(
-        "https://api.open-meteo.com/v1/forecast?latitude=-34.61&longitude=-58.38&current_weather=true"
-      );
-      const data = await res.json();
-      if (data.current_weather) {
-        setClima(
-          `Temperatura actual: ${data.current_weather.temperature}°C, Viento: ${data.current_weather.windspeed} km/h`
-        );
-      } else {
-        setClima("No se pudo obtener el clima.");
-      }
-    } catch (error) {
-      console.error("Error al obtener el clima:", error);
-      setClima("Error al conectar con la API del clima.");
+  const handleBienvenidaClick = () => {
+    if (showToast) return;
+
+    const ahora = new Date();
+    const hora = ahora.getHours();
+    let saludo;
+
+    if (hora < 12) {
+      saludo = "¡Buenos días!";
+    } else if (hora < 18) {
+      saludo = "¡Buenas tardes!";
+    } else {
+      saludo = "¡Buenas noches!";
     }
-  }
 
-  fetchClima();
+    const horaFormateada = ahora.toLocaleTimeString("es-ES", {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
 
-  return () => {
-    document.head.removeChild(link);
-    document.head.removeChild(title);
+    setToastData({ saludo, hora: horaFormateada });
+    setShowToast(true);
+
+    // Programa que el toast se oculte solo después de 5 segundos
+    setTimeout(() => {
+      setShowToast(false);
+    }, 5000);
   };
-}, []);
 
+  // Llamada a API de clima
+  useEffect(() => {
+    //  favicon y título dinámico
+    const link = document.createElement("link");
+    const title = document.createElement("title");
+    title.textContent = "Equipo Innovador - Inicio";
+    document.head.appendChild(title);
+    link.rel = "icon";
+    link.href = favicon;
+    document.head.appendChild(link);
+
+    // definimos la función y la ejecutamos
+    async function fetchClima() {
+      try {
+        const res = await fetch(
+          "https://api.open-meteo.com/v1/forecast?latitude=-34.61&longitude=-58.38&current_weather=true"
+        );
+        const data = await res.json();
+        if (data.current_weather) {
+          setClima(
+            `Temperatura actual: ${data.current_weather.temperature}°C, Viento: ${data.current_weather.windspeed} km/h`
+          );
+        } else {
+          setClima("No se pudo obtener el clima.");
+        }
+      } catch (error) {
+        console.error("Error al obtener el clima:", error);
+        setClima("Error al conectar con la API del clima.");
+      }
+    }
+
+    fetchClima();
+
+    return () => {
+      document.head.removeChild(link);
+      document.head.removeChild(title);
+    };
+  }, []);
 
   const integrantes = [
     {
@@ -97,12 +129,48 @@ useEffect(() => {
   return (
     <div className="home trama">
       {/* Hero Section */}
-      <section className="hero" style={{ backgroundColor: "#111" }}>
+      <section
+        className="hero"
+        style={{
+          background:
+            "linear-gradient(135deg, #EFF6FF 0%, #E0E7FF 50%, #F3E8FF 100%)",
+        }}
+      >
         <video autoPlay muted loop playsInline className="hero-video">
           <source src={heroVideo} type="video/mp4" />
           Tu navegador no soporta video en HTML5.
         </video>
 
+        {/* Toast de bienvenida */}
+        <div
+          className="toast-container position-fixed top-0 end-0 p-3"
+          style={{ zIndex: 9999 }}
+        >
+          <div
+            className={`toast ${showToast ? "show" : ""}`}
+            role="alert"
+            aria-live="assertive"
+            aria-atomic="true"
+          >
+            <div className="toast-header bg-success text-white">
+              <i className="bi bi-hand-thumbs-up me-2"></i>
+              <strong className="me-auto">{toastData.saludo}</strong>
+              <small className="text-white-50">{toastData.hora}</small>
+              <button
+                type="button"
+                className="btn-close btn-close-white"
+                onClick={() => setShowToast(false)}
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="toast-body">
+              <strong>¡Bienvenido a nuestro equipo!</strong> Explora las páginas
+              de cada integrante para conocer más sobre nosotros.
+            </div>
+          </div>
+        </div>
+
+        {/* Contenido del Hero */}
         <div className="container hero-content">
           <div className="row align-items-center min-vh-100 pt-5">
             <div className="col-lg-6">
@@ -113,7 +181,10 @@ useEffect(() => {
                 y aprender juntos en este emocionante viaje.
               </p>
               <div className="d-flex flex-wrap gap-3">
-                <button className="btn btn-primary btn-lg">
+                <button
+                  className="btn btn-primary btn-lg"
+                  onClick={handleBienvenidaClick}
+                >
                   <i className="bi bi-hand-thumbs-up me-2"></i>¡Bienvenido!
                 </button>
                 <a href="#equipo" className="btn btn-outline-light btn-lg">
@@ -164,16 +235,6 @@ useEffect(() => {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Sección de clima */}
-      <section className="py-5 bg-light text-center">
-        <div className="container">
-          <h4 className="mb-3 text-primary">Clima actual en Buenos Aires 🌤️</h4>
-          <p className="lead" style={{ color: "#0d6efd", fontWeight: "bold" }}>
-      {clima || "Cargando clima..."}
-          </p>
         </div>
       </section>
     </div>

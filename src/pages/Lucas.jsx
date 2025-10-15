@@ -22,10 +22,10 @@ export default function LucasPage() {
     };
   }, []);
 
-  // 1. Estado para manejar la visibilidad de la información adicional
+  // Estado para manejar la visibilidad de la información adicional
   const [infoVisible, setInfoVisible] = useState(false);
 
-  // 2. Estado para manejar el lema y su cambio
+  // Estado para manejar el lema y su cambio
   const lemas = [
     '"El invierno se acerca..."',
     '"Escucha mi rugido!"',
@@ -44,19 +44,19 @@ export default function LucasPage() {
     setLemaActual(nuevoLema);
   };
 
-  // 3. Función para el saludo
+  //  Función para el saludo
   const saludar = () => {
     alert(
       "¡Gracias por visitar mi perfil! Que los Antiguos Dioses y los Nuevos te acompañen."
     );
   };
 
-  // 4. Efecto para cambiar el título de la página
+  // Efecto para cambiar el título de la página
   useEffect(() => {
     document.title = "Lucas - Guardián del Muro";
   }, []);
 
-  // --- Estructura del Componente (reemplaza al body del HTML) ---
+  //  Estructura del Componente (reemplaza al body del HTML) 
   return (
     <div className="lucas-page-container">
       {/* Sección del Perfil */}
@@ -275,7 +275,7 @@ export default function LucasPage() {
                 </Link>
 
                 <Link
-                  to="/integrantes/victoria"
+                  to="/integrantes/sebastian"
                   className="btn btn-outline-light"
                 >
                   Siguiente Hermano<i className="bi bi-arrow-right ms-1"></i>

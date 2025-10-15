@@ -4,6 +4,7 @@ Materia: Desarrollo Frontend
 Profesor:  LUCIANO ARIEL MARTINEZ
 Año: 2025
 
+
 Equipo Innovador - Grupo 9
 Integrantes:
 Sebastián	Gutierrez
@@ -12,17 +13,24 @@ Lucas	Tarantino
 Jose Luis Colombo
 Victoria Sobral
 
-Este proyecto es una Single Page Application (SPA) desarrollada con React y Vite, como parte de la materia Desarrollo Frontend en el *Instituto de Formación Técnica Superior N°29*. 
-El objetivo principal es transformar un sitio web estático en una aplicación moderna, interactiva y modular, integrando componentes dinámicos como una API de clima en tiempo real.
+
+Este proyecto es una Single Page Application (SPA) desarrollada con React y Vite,
+como parte de la materia Desarrollo Frontend en el *Instituto de Formación
+ Técnica Superior N°29*. 
+El objetivo principal es transformar un sitio web estático en una aplicación moderna,
+ interactiva y modular, integrando componentes dinámicos como una API de clima
+en tiempo real.
 
 
  Características principales
 - Navegación sin recargar la página gracias a **React Router DOM**.  
 -  Video de fondo en la sección principal.  
 -  Integración con **API de clima** (Open-Meteo) mostrando temperatura en tiempo real.  
--  Componentes reutilizables y organizados por secciones (Home, Bitácora, Integrantes, Victoria, etc.).  
+-  Componentes reutilizables y organizados por secciones
+(Home, Bitácora, Integrantes, Victoria, etc.).  
 -  Diseño responsive con **Bootstrap** y CSS personalizado.  
 -  Configuración optimizada con **Vite** para desarrollo rápido.
+
 
  Estructura del proyecto
 src/
@@ -43,10 +51,12 @@ Tecnologías utilizadas
 
 
 API del Clima
-El proyecto obtiene información del clima actual de Buenos Aires utilizando la API pública Open-Meteo.
+El proyecto obtiene información del clima actual de Buenos Aires utilizando
+ la API pública Open-Meteo.
+
+
 Instalación y ejecución
 Si desea ejecutar el proyecto en su máquina local, siga estos pasos:
-
 
 Clonar el repositorio
 git clone https://github.com/josecolombotk/desarrollo-frontend-ifts29-2.git
@@ -68,6 +78,4 @@ Objetivos del proyecto
 -Integrar servicios externos mediante APIs públicas.
 -Implementar una interfaz responsiva y atractiva.
 -Practicar control de versiones con Git y GitHub.
-
-
 

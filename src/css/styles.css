@@ -1,10 +1,7 @@
-/* Importar Bootstrap desde CDN */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css");
 
-/* Importar Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap");
 
-/* Variables CSS */
 :root {
   --primary-color: #517fa4;
   --secondary-color: #243949;
@@ -16,7 +13,6 @@
   --border-radius: 10px;
 }
 
-/* Estilos generales */
 * {
   margin: 0;
   padding: 0;
@@ -27,11 +23,11 @@ body {
   font-family: "Poppins", sans-serif;
   line-height: 1.6;
   color: var(--text-color);
-  background-color: var(--light-bg);
+  background-color: linear-gradient(135deg, #EFF6FF 0%, #E0E7FF 50%, #F3E8FF 100%) !important;
 }
 
 body.trama {
-  background-image: linear-gradient(135deg, #f5f7fa 0%, #8cace1 100%);
+  background-color: linear-gradient(135deg, #EFF6FF 0%, #E0E7FF 50%, #F3E8FF 100%);
 }
 
 /* Header y navegación */
@@ -104,7 +100,7 @@ body.trama {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Oscurece (0.5 = 50% opacidad) */
+  background: rgba(0, 0, 0, 0.5); 
   z-index: 1;
 }
 
@@ -156,7 +152,7 @@ body.trama {
     #243949 51%,
     #517fa4 100%
   );
-  border: none;
+  border: none !important;
   border-radius: 15px;
   padding: 0.75rem 2rem;
   font-weight: 500;
@@ -167,14 +163,14 @@ body.trama {
 }
 
 .btn-primary:hover {
-  background-position: right center; /* change the direction of the change here */
+  background-position: right center; 
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
 }
 
 .btn-outline-primary {
-  border: 2px solid var(--secondary-color);
-  color: var(--secondary-color);
+  border: 2px solid var(--white) !important;
+  color: var(--white) ;
   border-radius: 25px;
   padding: 0.75rem 2rem;
   font-weight: 500;
@@ -211,7 +207,6 @@ footer {
   animation: fadeInUp 0.6s ease;
 }
 
-/* Responsive Design */
 
 /* Mobile pequeño - 400px */
 @media (max-width: 400px) {
@@ -294,8 +289,8 @@ footer {
 }
 
 .skill-tag {
-  background: var(--secondary-color);
-  color: var(--white);
+  background: var(--white) !important;
+  color: black !important;
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
   font-size: 0.9rem;
@@ -492,4 +487,34 @@ footer {
   color: #0d6efd;
   font-weight: bold;
   font-size: 1.25rem;
+}
+
+#equipo h2.text-primary {
+  color: #243949 !important;
+}
+
+
+#equipo .card {
+  background: linear-gradient(135deg, #EFF6FF 0%, #E0E7FF 100%) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero .btn-outline-light {
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+    background-color: transparent;
+}
+
+.hero .btn-outline-light:hover {
+    color: #243949 !important;
+    background-color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+.hero .btn-outline-light i {
+    color: #ffffff !important;
+}
+
+.hero .btn-outline-light:hover i {
+    color: #243949 !important;
 }

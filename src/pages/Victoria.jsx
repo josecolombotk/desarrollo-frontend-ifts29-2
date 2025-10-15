@@ -3,7 +3,6 @@ import { Carousel } from "bootstrap";
 import "../css/victoria.css";
 import { Link } from "react-router-dom";
 
-
 // Importar imágenes desde assets
 import victoriaImg from "../assets/victoria-ind.png";
 import debootImg from "../assets/victoria-deboot.png";
@@ -19,22 +18,40 @@ import speaknowImg from "../assets/vic-speaknow.jpg";
 import oysterImg from "../assets/vic-oyster.jpg";
 import logoImg from "../assets/logo.svg";
 import fondoImg from "../assets/victoria-fondo.webp";
+import favicon from "../assets/victoria-favicon.png";
 
 export default function Victoria() {
   const carouselRef = useRef(null);
-  const pageContainerRef = useRef(null); // 1. Referencia para el contenedor principal
+  const pageContainerRef = useRef(null);
 
-  // 🧚🏻‍♀️ Animación de corazones
-  const mostrarCodigoEjemplo = () => {
-    for (let i = 0; i < 20; i++) {
-      setTimeout(() => {
-        crearCorazon();
-      }, i * 200);
+  // Favicon y título dinámico
+  useEffect(() => {
+    // Guardar título original
+    const originalTitle = document.title;
+    document.title = "Victoria";
+
+    // Cambiar o crear favicon
+    let link = document.querySelector("link[rel~='icon']");
+    if (!link) {
+      link = document.createElement("link");
+      link.rel = "icon";
+      document.head.appendChild(link);
     }
-  };
+    const originalIcon = link.href;
+    link.href = favicon;
 
+    // restaurar valores originales
+    return () => {
+      document.title = originalTitle;
+      if (originalIcon) {
+        link.href = originalIcon;
+      }
+    };
+  }, []);
+
+  // Función de animación de corazones
   const crearCorazon = () => {
-    if (!pageContainerRef.current) return; // Asegurarse de que el contenedor exista
+    if (!pageContainerRef.current) return;
 
     const corazon = document.createElement("div");
     corazon.classList.add("corazon");
@@ -43,20 +60,30 @@ export default function Victoria() {
     corazon.style.left = Math.random() * 100 + "vw";
     corazon.style.fontSize = Math.random() * 20 + 20 + "px";
     corazon.style.pointerEvents = "none";
-    pageContainerRef.current.appendChild(corazon); // 2. Añadir el corazón al contenedor de la página
+    pageContainerRef.current.appendChild(corazon);
 
     setTimeout(() => {
       corazon.remove();
     }, 6000);
   };
 
-  // ✍️ Efecto "escribir nombre"
+  const mostrarCodigoEjemplo = () => {
+    for (let i = 0; i < 20; i++) {
+      setTimeout(() => {
+        crearCorazon();
+      }, i * 200);
+    }
+  };
+
+  // Efecto "escribir nombre"
   useEffect(() => {
     const nombre = document.querySelector(".typing-effect");
     if (!nombre) return;
+
     const textoOriginal = "Victoria";
     nombre.textContent = "";
     let i = 0;
+
     const typing = setInterval(() => {
       if (i < textoOriginal.length) {
         nombre.textContent += textoOriginal.charAt(i);
@@ -65,6 +92,8 @@ export default function Victoria() {
         clearInterval(typing);
       }
     }, 100);
+
+    return () => clearInterval(typing);
   }, []);
 
   // Inicializar carousel
@@ -74,11 +103,6 @@ export default function Victoria() {
       new Carousel(carrusel, { interval: 3000, ride: "carousel" });
     }
   }, []);
-
-  const scrollSuave = (id) => {
-    const element = document.getElementById(id);
-    if (element) element.scrollIntoView({ behavior: "smooth" });
-  };
 
   // Aplicar estilos globales al montar el componente
   useEffect(() => {
@@ -93,10 +117,15 @@ export default function Victoria() {
     };
   }, []);
 
+  const scrollSuave = (id) => {
+    const element = document.getElementById(id);
+    if (element) element.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div
       id="top"
-      ref={pageContainerRef} // 3. Asignar la referencia al div
+      ref={pageContainerRef}
       className="victoria-page-container"
       style={{ backgroundImage: `url(${fondoImg})` }}
     >
@@ -163,7 +192,7 @@ export default function Victoria() {
         </div>
       </section>
 
-      {/* 🎨 Showcase de Proyectos */}
+      {/* Showcase de Proyectos */}
       <section className="py-5">
         <div className="container">
           <div className="row">
@@ -316,7 +345,7 @@ export default function Victoria() {
         </div>
       </section>
 
-      {/* 📚 Sección de Favoritos */}
+      {/* Sección de Favoritos */}
       <section className="py-5">
         <div className="container">
           <div className="row">
@@ -445,29 +474,27 @@ export default function Victoria() {
         </div>
       </section>
 
-      {/* 🔗 Navegación entre perfiles */}
+      {/*  Navegación entre perfiles */}
       <section className="mb-5 py-4 bg-primary text-white">
         <div className="container">
           <div className="row">
             <div className="col-12">
               <div className="d-flex justify-content-between align-items-center">
-                <a href="/lucas" className="btn btn-outline-light">
+                <Link to="/integrantes/sebastian" className="btn btn-outline-light">
                   <i className="bi bi-arrow-left me-1"></i>Perfil anterior
-                </a>
-<div className="text-center">
-  <small>Otros integrantes:</small>
-  <div className="mt-2">
-    <Link to="/lucas" className="btn btn-sm btn-outline-light me-2">Lucas</Link>
-    <Link to="/sebastian" className="btn btn-sm btn-outline-light me-2">Sebastian</Link>
-    <Link to="/estiven" className="btn btn-sm btn-outline-light me-2">Estiven</Link>
-    <Link to="/jose" className="btn btn-sm btn-outline-light">Jose</Link>
-  </div>
-</div>
-
-
-                <a href="/sebastian" className="btn btn-outline-light">
+                </Link>
+                <div className="text-center">
+                  <small>Otros integrantes:</small>
+                  <div className="mt-2">
+                    <Link to="/integrantes/lucas" className="btn btn-sm btn-outline-light me-2">Lucas</Link>
+                    <Link to="/integrantes/sebastian" className="btn btn-sm btn-outline-light me-2">Sebastian</Link>
+                    <Link to="/integrantes/estiven" className="btn btn-sm btn-outline-light me-2">Estiven</Link>
+                    <Link to="/integrantes/jose" className="btn btn-sm btn-outline-light">Jose</Link>
+                  </div>
+                </div>
+                <Link to="/integrantes/estiven" className="btn btn-outline-light">
                   Siguiente perfil<i className="bi bi-arrow-right ms-1"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
