@@ -1,157 +1,148 @@
-.sebastian-page-container {
-            background-image: url("../img/sebastian-redes.jpg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-color: var(--dark-bg);
-            min-height: 100vh;
-        }
-        
-.sebastian-page-container .portfolio-header {
-            background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
-            color: white;
-            padding: 3rem 0;
-            margin-bottom: 3rem;
-            text-align: center;
-            border-bottom: 3px solid #e94560;
-        }
-        
-.sebastian-page-container .section-title {
-            color: #e94560;
-            padding-bottom: 15px;
-            margin-bottom: 30px;
-            border-bottom: 2px solid #e94560;
-            text-align: center;
-        }
-        
-.sebastian-page-container .movie-card, .sebastian-page-container .music-card {
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-            margin-bottom: 30px;
-            height: 380px;
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-            background: linear-gradient(145deg, #16213e, #1a1a2e);
-        }
-        
-.sebastian-page-container .movie-card:hover, .sebastian-page-container .music-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 12px 25px rgba(233, 69, 96, 0.25);
-        }
-        
-.sebastian-page-container .card-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-.sebastian-page-container .movie-card:hover .card-image, .sebastian-page-container .music-card:hover .card-image {
-            transform: scale(1.08);
-        }
-        
-.sebastian-page-container .card-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(10, 10, 20, 0.9);
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-            padding: 20px;
-            text-align: center;
-            border-radius: 10px;
-        }
-        
-.sebastian-page-container .movie-card:hover .card-overlay, .sebastian-page-container .music-card:hover .card-overlay {
-            opacity: 1;
-        }
-        
-.sebastian-page-container .card-title {
-            font-size: 1.4rem;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #e94560;
-        }
-        
-.sebastian-page-container .card-info {
-            font-style: italic;
-            margin-bottom: 12px;
-            color: #8a8a9c;
-        }
-        
-.sebastian-page-container .card-description {
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-            line-height: 1.5;
-        }
-        
-.sebastian-page-container .card-price {
-            font-weight: bold;
-            color: #0fce5c;
-            margin-bottom: 15px;
-        }
-        
-.sebastian-page-container .btn-action {
-            background-color: #e94560;
-            border: none;
-            padding: 8px 20px;
-            border-radius: 30px;
-            color: white;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-        
-.sebastian-page-container .btn-action:hover {
-            background-color: #ff5c77;
-            transform: scale(1.05);
-        }
-.sebastian-page-container .card-content {
-            padding: 15px;
-        }
-        
-.sebastian-page-container .card-content h3 {
-            color: #e94560;
-            font-size: 1.2rem;
-            margin-top: 10px;
-        }
-        
-.sebastian-page-container .card-content p {
-            color: #8a8a9c;
-            font-size: 0.9rem;
-        }
-.sebastian-page-container .music-icon {
-            font-size: 2.5rem;
-            color: #e94560;
-            margin-bottom: 15px;
-        }
-        
-.sebastian-page-container footer {
-            background-color: #0f3460;
-            color: white;
-            padding: 2.5rem 0;
-            margin-top: 4rem;
-        }
-        
-.sebastian-page-container .social-icons a {
-            color: white;
-            font-size: 1.5rem;
-            margin: 0 10px;
-            transition: color 0.3s ease;
-        }
-        
-.sebastian-page-container .social-icons a:hover {
-            color: #e94560;
-        }
-        
-.sebastian-page-container .fondo {
-            background-color: rgba(255, 255, 255, 0.616);
-        }
-        
+/* src/pages/Sebastian.css */
+
+/* Reset para el componente Sebastián */
+
+/* Fuerza la eliminación de cualquier fondo rosado */
+.sebastian-page,
+.sebastian-profile-card,
+.card-body {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* Específico para la card de perfil */
+.sebastian-profile-card .card-body {
+  background: rgba(255, 255, 255, 0.377) !important; /* Fondo blanco semi-transparente */
+  backdrop-filter: blur(10px);
+}
+
+/* Para los botones - usa tu paleta de colores */
+.btn-primary {
+  background-color: #517fa4 !important;
+  border-color: #517fa4 !important;
+}
+
+.btn-outline-primary {
+  color: #517fa4 !important;
+  border-color: #517fa4 !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: #517fa4 !important;
+  color: white !important;
+}
+
+.sebastian-page {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Fondo específico para Sebastián */
+.sebastian-page {
+  background-image: url("/src/assets/sebastian-redes.jpg") !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  background-position: center !important;
+}
+
+/* Profile card específico */
+.sebastian-profile-card {
+  max-width: auto !important;
+  background-color: rgba(21, 22, 19, 0.377);
+  border: none !important;
+  border-radius: 20px !important;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.sebastian-profile-card::before {
+  display: none;
+}
+
+/* Colores específicos para Sebastián */
+.sebastian-text-primary {
+  color: #243949 !important; /* Cambia a tu azul secundario */
+}
+
+.sebastian-section-title {
+  color: #e94560;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #e94560;
+  text-align: center;
+}
+
+/* Cards de películas y música */
+
+
+/* Fondo de secciones */
+.sebastian-fondo {
+  background-color: rgba(255, 255, 255, 0.377) !important;
+  backdrop-filter: blur(10px);
+}
+
+/* Skills styles específicos */
+.sebastian-skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.sebastian-skill-tag {
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.sebastian-skill-tag:hover {
+  transform: scale(1.05);
+}
+
+.sebastian-skill-colored {
+  transition: all 0.5s ease;
+}
+
+/* Profile image específica */
+.sebastian-profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+ 
+  box-shadow: 0 5px 15px rgba(233, 69, 96, 0.4);
+  display: block;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sebastian-movie-card, .sebastian-music-card {
+    height: 300px;
+  }
+  
+  .sebastian-card-overlay {
+    padding: 15px;
+  }
+  
+  .sebastian-card-title {
+    font-size: 1.1rem;
+  }
+  
+  .sebastian-profile-img {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .sebastian-profile-card{
+    padding: 2rem !important;
+  }
+}

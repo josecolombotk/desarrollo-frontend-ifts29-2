@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "titulo": "Terminator 2: El Juicio Final",
+    "imagen": "/src/assets/sebastian-terminator2.jpg",
+    "director": "James Cameron",
+    "año": "1991",
+    "genero": "Ciencia Ficción",
+    "descripcion": "Un cyborg mejorado es enviado desde el futuro para proteger al joven John Connor de un Terminator más avanzado y mortífero.",
+    "rating": "9.5/10 ⭐",
+    "trailer": "https://www.youtube.com/watch?v=CRRlbK5w8AE"
+  },
+  {
+    "id": 2,
+    "titulo": "The Big Short",
+    "imagen": "/src/assets/sebastian-thebigshort1.jpg",
+    "director": "Adam McKay",
+    "año": "2015",
+    "genero": "Drama",
+    "descripcion": "En 2008, un grupo de inversionistas se da cuenta de la burbuja inmobiliaria y decide aprovecharse de la inminente crisis económica.",
+    "rating": "7.8/10 ⭐",
+    "trailer": "https://www.youtube.com/watch?v=vgqG3ITMv1Q"
+  },
+  {
+    "id": 3,
+    "titulo": "El Hombre Sin Pasado",
+    "imagen": "/src/assets/sebastian-ajeoosi2.jpg",
+    "director": "Lee Jeong-beom",
+    "año": "2010",
+    "genero": "Acción",
+    "descripcion": "El encargado de una casa de empeños con un pasado oscuro se enfrenta a una red de tráfico de drogas y de órganos.",
+    "rating": "7.8/10 ⭐",
+    "trailer": "https://www.youtube.com/watch?v=38rPoGSr19U"
+  },
+  {
+    "id": 4,
+    "titulo": "Cómo Hackear a tu Jefe",
+    "imagen": "/src/assets/sebastian-Como_Hackear_seu_Chefe3.jpg",
+    "director": "Comedia",
+    "año": "2020",
+    "genero": "Tecnología",
+    "descripcion": "Tres empleados de TI deciden tomar el control digital de la empresa cuando descubren que su jefe planea despedirlos.",
+    "rating": "6.5/10 ⭐",
+    "trailer": "https://www.youtube.com/watch?v=wWxPqJpBSps"
+  }
+]
