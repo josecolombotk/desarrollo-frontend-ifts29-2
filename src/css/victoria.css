@@ -222,3 +222,36 @@ body {
     background-color: #B5759F !important;
     border-color: #B5759F !important;
 }
+
+
+/* Específicos para diferentes secciones */
+.victoria-page-container h1,
+.victoria-page-container h2,
+.victoria-page-container h3,
+.victoria-page-container h4,
+.victoria-page-container h5,
+.victoria-page-container h6 {
+    color: #B5759F !important;
+}
+
+/* Botones de navegación con borde y texto blanco */
+.victoria-page-container .bg-primary .btn-outline-light {
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+    background-color: transparent;
+}
+
+.victoria-page-container .bg-primary .btn-outline-light:hover {
+    color: #B5759F !important;
+    background-color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+/* Asegurar que los iconos también sean blancos */
+.victoria-page-container .bg-primary .btn-outline-light i {
+    color: #ffffff !important;
+}
+
+.victoria-page-container .bg-primary .btn-outline-light:hover i {
+    color: #B5759F !important;
+}
