@@ -290,7 +290,7 @@ footer {
 
 .skill-tag {
   background: var(--white) !important;
-  color: var(--white);
+  color: black !important;
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
   font-size: 0.9rem;
