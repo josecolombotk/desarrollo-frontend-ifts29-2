@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "titulo": "Still Loving You",
+    "artista": "Scorpions",
+    "imagen": "/src/assets/sebastian-scorpion1.jpg",
+    "año": "1984",
+    "genero": "Rock",
+    "descripcion": "Uno de los mayores éxitos de la banda alemana Scorpions, una power ballad que se ha convertido en un himno del rock romántico.",
+    "duracion": "6:28",
+    "enlace": "https://youtu.be/CjRas1yOWvo?list=RDCjRas1yOWvo"
+  },
+  {
+    "id": 2,
+    "titulo": "Don't Cry",
+    "artista": "Guns N' Roses",
+    "imagen": "/src/assets/sebastian-dontcry.jpg",
+    "año": "1991",
+    "genero": "Rock",
+    "descripcion": "Una de las baladas más famosas de Guns N' Roses, incluida en el álbum Use Your Illusion I.",
+    "duracion": "4:45",
+    "enlace": "https://www.youtube.com/watch?v=zRIbf6JqkNc"
+  },
+  {
+    "id": 3,
+    "titulo": "Creep",
+    "artista": "Radiohead",
+    "imagen": "/src/assets/sebastian-creep.jpg",
+    "año": "1992",
+    "genero": "Rock Alternativo",
+    "descripcion": "El éxito breakthrough de Radiohead que los llevó a la fama internacional.",
+    "duracion": "3:58",
+    "enlace": "https://www.youtube.com/watch?v=XFkzRNyygfk"
+  },
+  {
+    "id": 4,
+    "titulo": "Numb",
+    "artista": "Linkin Park",
+    "imagen": "/src/assets/sebas-numb.jpg",
+    "año": "2003",
+    "genero": "Rock",
+    "descripcion": "Uno de los mayores éxitos de Linkin Park, que explora temas de presión y desconexión emocional.",
+    "duracion": "3:07",
+    "enlace": "https://www.youtube.com/watch?v=kXYiU_JCYtU"
+  }
+]

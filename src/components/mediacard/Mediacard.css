@@ -1,0 +1,144 @@
+.media-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  margin-bottom: 30px;
+  height: 380px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  background: linear-gradient(145deg, #16213e, #1a1a2e);
+}
+
+.media-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 12px 25px rgba(233, 69, 96, 0.25);
+}
+
+/* Variantes específicas */
+.movie-card {
+  background: linear-gradient(145deg, #16213e, #1a1a2e);
+}
+
+.music-card {
+  background: linear-gradient(145deg, #1a2e3e, #2d1a3e);
+}
+
+.media-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.media-card:hover .media-card-image {
+  transform: scale(1.08);
+}
+
+.media-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 20, 0.9);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.media-card:hover .media-card-overlay {
+  opacity: 1;
+}
+
+.media-card-title {
+  color: #e94560;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  line-height: 1.2;
+}
+
+.media-card-info {
+  font-style: italic;
+  margin-bottom: 12px;
+  color: #8a8a9c;
+}
+
+.media-card-description {
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.media-card-rating {
+  font-weight: bold;
+  color: #0fce5c;
+  margin-bottom: 15px;
+}
+
+.media-card-duration {
+  font-weight: bold;
+  color: #0fce5c;
+  margin-bottom: 15px;
+}
+
+.media-card-btn {
+  background-color: #e94560 !important;
+  border: none !important;
+  padding: 8px 20px;
+  border-radius: 30px;
+  color: white !important;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.media-card-btn:hover {
+  background-color: #ff5c77 !important;
+  transform: scale(1.05);
+  color: white !important;
+}
+
+.media-card-content {
+  padding: 15px;
+  background: rgba(22, 33, 62, 0.8);
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.media-card-content h3 {
+  color: #e94560;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.media-card-content p {
+  color: #8a8a9c;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.media-card-icon {
+  font-size: 2.5rem;
+  color: #e94560;
+  margin-bottom: 15px;
+}
+
+/* Responsive */
+
