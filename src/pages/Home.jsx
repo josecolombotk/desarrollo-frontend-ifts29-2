@@ -41,7 +41,7 @@ export default function Home() {
     // Programa que el toast se oculte solo después de 5 segundos
     setTimeout(() => {
       setShowToast(false);
-    }, 5000);
+    }, 3000);
   };
 
   // Llamada a API de clima
@@ -163,7 +163,7 @@ export default function Home() {
                 aria-label="Close"
               ></button>
             </div>
-            <div className="toast-body">
+            <div className="toast-body text-dark">
               <strong>¡Bienvenido a nuestro equipo!</strong> Explora las páginas
               de cada integrante para conocer más sobre nosotros.
             </div>
