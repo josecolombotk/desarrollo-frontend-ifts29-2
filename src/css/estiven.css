@@ -1,5 +1,12 @@
+:root {
+  --primary-color: #517fa4;
+  --secondary-color: #243949;
+  --accent-color: var(--primary-color); 
+  --color-estiven: #f1c40f; 
+}
+
 .estiven-page {
-  background: linear-gradient(to bottom right, #f5f7fa, #e4e9f0);
+  background: linear-gradient(to bottom right, #f5f7fa, #e4e9f0)  !important;
   min-height: 100vh;
   color: #111;
   padding: 3rem 1rem;
@@ -7,25 +14,27 @@
 }
 
 .estiven-card {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.08)  !important;
   border-radius: 20px;
   padding: 3rem 2rem;
   max-width: 800px;
   width: 100%;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4)  !important;
   transition: all 0.3s ease;
 }
 
 .estiven-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.15)  !important;
 }
+
+
 
 .estiven-img {
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  border: 4px solid #f1c40f;
+  border: 4px solid var(--color-estiven);;
   object-fit: cover;
   transition: all 0.3s ease;
 }
@@ -44,7 +53,7 @@
 
 .skill-tag {
   background: #f1c40f;
-  color: #000;
+  color: #000  !important;
   padding: 0.4rem 1rem;
   border-radius: 20px;
   font-weight: 500;
@@ -53,18 +62,18 @@
 }
 
 .skill-tag:hover {
-  background: #fff;
+  background: #fff  !important;
   color: #111;
 }
 
 .btn-outline-light {
-  border-color: #f1c40f !important;
-  color: #f1c40f !important;
+  border-color: var(--color-estiven) !important;
+  color: var(--color-estiven) !important;
   transition: all 0.3s ease;
 }
 
 .btn-outline-light:hover {
-  background-color: #f1c40f !important;
+  background-color: var(--color-estiven) !important;
   color: #000 !important;
 }
 
@@ -79,45 +88,6 @@
     height: 140px;
   }
 }
-/* Secciones de favoritos  */
-.favorites-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.8rem;
-  margin-top: 1rem;
-}
 
-.favorite-card {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(241, 196, 15, 0.3);
-  color: #fff;
-  padding: 0.8rem 1.2rem;
-  border-radius: 15px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
 
-.favorite-card:hover {
-  background: #f1c40f;
-  color: #000;
-  transform: translateY(-3px);
-}
 
-.carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230d6efd'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
-}
-
-.carousel-control-next-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230d6efd'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-}
-
-#moviesCarousel .carousel-control-prev,
-#musicCarousel .carousel-control-prev {
-    left: -50px;
-}
-
-#moviesCarousel .carousel-control-next,
-#musicCarousel .carousel-control-next {
-    right: -50px;
-}
