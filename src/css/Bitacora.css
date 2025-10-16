@@ -1,11 +1,11 @@
 :root {
-  --primary-color: #517fa4;
-  --secondary-color: #243949;
-  --accent-color: #517fa4;
-  --text-dark: #2d3436;
-  --text-light: #636e72;
-  --bg-light: #f8f9fa;
-  --white: #ffffff;
+  --primary-color: #517fa4 !important;
+  --secondary-color: #243949 !important;
+  --accent-color: #517fa4 !important;
+  --text-dark: #2d3436 !important;
+  --text-light: #636e72 !important;
+  --bg-light: #f8f9f !important;
+  --white: #ffffff !important;
   --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --shadow-hover: 0 10px 20px rgba(0, 0, 0, 0.15);
   --border-radius: 10px;
@@ -13,7 +13,7 @@
 }
 
 .bitacora-header {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
   color: white;
   padding: 4rem 0 3rem;
   text-align: center;
