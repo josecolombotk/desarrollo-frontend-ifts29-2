@@ -9,6 +9,7 @@ export default function GaleriaJsonPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    document.title = "Ideas de Proyectos";
     // Simular carga de datos
     setTimeout(() => {
       setDatos(galeriaData);

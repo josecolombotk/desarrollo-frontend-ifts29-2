@@ -14,6 +14,7 @@ export default function ApiPage() {
   ];
 
   useEffect(() => {
+    document.title = "Nuestros Climas";
     const fetchWeather = async () => {
       try {
         const promises = developers.map(dev =>
