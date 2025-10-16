@@ -316,7 +316,7 @@ export default function Jose() {
           <div className="row">
             <div className="col-12">
               <div className="d-flex justify-content-between align-items-center">
-                <Link to="/integrantes/sebastian" className="btn btn-outline-light">
+                <Link to="/integrantes/estiven" className="btn btn-outline-light">
                   <i className="bi bi-arrow-left me-1"></i>Perfil anterior
                 </Link>
                 <div className="text-center">
@@ -328,7 +328,7 @@ export default function Jose() {
                     <Link to="/integrantes/victoria" className="btn btn-sm btn-outline-light">Victoria</Link>
                   </div>
                 </div>
-                <Link to="/integrantes/estiven" className="btn btn-outline-light">
+                <Link to="/integrantes/lucas" className="btn btn-outline-light">
                   Siguiente perfil<i className="bi bi-arrow-right ms-1"></i>
                 </Link>
               </div>
