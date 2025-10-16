@@ -42,8 +42,10 @@ const SequentialCarousel = ({
             key={index}
             className={`carousel-item ${index === currentSlide ? 'active' : ''}`}
           >
-            <div className="d-flex align-items-center p-4">
-              <div className="flex-shrink-0 me-4">
+            {/* Layout responsive con flexbox */}
+            <div className="d-flex flex-column flex-md-row align-items-center p-4">
+              {/* Imagen - En móvil: arriba, en desktop: izquierda */}
+              <div className="flex-shrink-0 me-md-4 mb-3 mb-md-0">
                 <img 
                   src={item.image} 
                   alt={item.title}
@@ -56,7 +58,8 @@ const SequentialCarousel = ({
                   }} 
                 />
               </div>
-              <div className="flex-grow-1">
+              {/* Texto - En móvil: abajo, en desktop: derecha */}
+              <div className="flex-grow-1 text-center text-md-start">
                 <h5 className="mb-3">{item.title}</h5>
                 <p className="mb-0">{item.description}</p>
               </div>
@@ -68,11 +71,11 @@ const SequentialCarousel = ({
       {/* Controles */}
       {showControls && (
         <>
-          <button className="carousel-control-prev carousel-3d-btn prev" onClick={prevSlide}>       
+          <button className="carousel-control-prev" onClick={prevSlide}>       
             <i className="bi bi-chevron-left"></i>
           </button>
           <button className="carousel-control-next" onClick={nextSlide}>
-            <i className="bi bi-chevron-right carousel-control-icon"></i>
+            <i className="bi bi-chevron-right"></i>
           </button>
         </>
       )}

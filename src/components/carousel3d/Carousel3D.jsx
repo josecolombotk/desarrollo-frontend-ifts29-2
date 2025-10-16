@@ -4,6 +4,20 @@ import './Carousel3D.css';
 
 const Carousel3D = ({ items, autoRotate = false, interval = 5000 }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detectar si es móvil
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+  
 
   const rotate = (direction) => {
     setCurrentSlide(prev => {
@@ -30,10 +44,10 @@ const Carousel3D = ({ items, autoRotate = false, interval = 5000 }) => {
   }, [autoRotate, interval]);
 
   return (
-    <div className="carousel-3d-container">
+    <div className="carousel-3d-container ${isMobile ? 'mobile-view' : ''}">
       <div 
         className="carousel-3d" 
-        style={{ transform: `rotateY(${currentSlide * -90}deg)` }}
+        style={!isMobile ? { transform: `rotateY(${currentSlide * -90}deg)` } : {}}
       >
         {items.map((item, index) => (
           <div 
