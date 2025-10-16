@@ -1,6 +1,7 @@
 import React from "react";
 import { Routes, Route, Outlet } from "react-router-dom";
 
+
 //  Importar componentes de layout
 import Sidebar from "./components/sidebar/Sidebar";
 import Footer from "./components/footer/Footer.jsx";

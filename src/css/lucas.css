@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Uncial+Antiqua&display=swap");
 
 :root {
-  --primary-color: #b8860b !important;
-  --secondary-color: #607d8b !important;
-  --accent-color: #961313 !important;
-  --card-bg-color: #f5f5dc !important;
-  --text-color: #333333 !important;
-  --dark-bg: #0d1a26 !important;
-  --white: #ffffff !important;
-  --shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
-  --border-radius: 8px !important;
+  --primary-color: #b8860b;
+  --secondary-color: #607d8b;
+  --accent-color: #961313;
+  --card-bg-color: #f5f5dc;
+  --text-color: #333333;
+  --dark-bg: #0d1a26;
+  --white: #ffffff;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --border-radius: 8px;
 }
 
 /* Contenedor principal con el fondo */

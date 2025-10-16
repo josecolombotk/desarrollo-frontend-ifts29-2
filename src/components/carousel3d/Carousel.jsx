@@ -1,6 +1,6 @@
 // components/SequentialCarousel.jsx
 import React, { useState, useEffect } from 'react';
-import '../css/estiven.css';
+import './Carousel1.css';
 
 const SequentialCarousel = ({ 
   items, 
@@ -42,25 +42,23 @@ const SequentialCarousel = ({
             key={index}
             className={`carousel-item ${index === currentSlide ? 'active' : ''}`}
           >
-            <div className="carousel-content">
-              {item.image && (
-                <div className="carousel-image">
-                  <img 
-                    src={item.image} 
-                    alt={item.title}
-                    style={{ 
-                      width: "200px", 
-                      height: "280px", 
-                      objectFit: "cover", 
-                      borderRadius: "15px", 
-                      boxShadow: "0 8px 20px rgba(0,0,0,0.3)" 
-                    }} 
-                  />
-                </div>
-              )}
-              <div className="carousel-text">
-                <h5>{item.title}</h5>
-                <p>{item.description}</p>
+            <div className="d-flex align-items-center p-4">
+              <div className="flex-shrink-0 me-4">
+                <img 
+                  src={item.image} 
+                  alt={item.title}
+                  style={{ 
+                    width: "200px", 
+                    height: "280px", 
+                    objectFit: "cover", 
+                    borderRadius: "15px", 
+                    boxShadow: "0 8px 20px rgba(0,0,0,0.3)" 
+                  }} 
+                />
+              </div>
+              <div className="flex-grow-1">
+                <h5 className="mb-3">{item.title}</h5>
+                <p className="mb-0">{item.description}</p>
               </div>
             </div>
           </div>
@@ -70,11 +68,11 @@ const SequentialCarousel = ({
       {/* Controles */}
       {showControls && (
         <>
-          <button className="carousel-control-prev" onClick={prevSlide}>
-            <span className="carousel-control-prev-icon"></span>
+          <button className="carousel-control-prev carousel-3d-btn prev" onClick={prevSlide}>       
+            <i className="bi bi-chevron-left"></i>
           </button>
           <button className="carousel-control-next" onClick={nextSlide}>
-            <span className="carousel-control-next-icon"></span>
+            <i className="bi bi-chevron-right carousel-control-icon"></i>
           </button>
         </>
       )}

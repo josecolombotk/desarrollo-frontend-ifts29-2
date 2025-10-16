@@ -1,6 +1,6 @@
 // components/Carousel3D.jsx
 import React, { useState, useEffect } from 'react';
-import '../css/estiven.css';
+import './Carousel3D.css';
 
 const Carousel3D = ({ items, autoRotate = false, interval = 5000 }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
