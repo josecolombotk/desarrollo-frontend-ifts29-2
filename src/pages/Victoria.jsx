@@ -24,13 +24,13 @@ export default function Victoria() {
   const carouselRef = useRef(null);
   const pageContainerRef = useRef(null);
 
-  // Favicon y título dinámico
+
   useEffect(() => {
-    // Guardar título original
+
     const originalTitle = document.title;
     document.title = "Victoria";
 
-    // Cambiar o crear favicon
+
     let link = document.querySelector("link[rel~='icon']");
     if (!link) {
       link = document.createElement("link");
@@ -40,7 +40,7 @@ export default function Victoria() {
     const originalIcon = link.href;
     link.href = favicon;
 
-    // restaurar valores originales
+
     return () => {
       document.title = originalTitle;
       if (originalIcon) {
@@ -104,7 +104,7 @@ export default function Victoria() {
     }
   }, []);
 
-  // Aplicar estilos globales al montar el componente
+
   useEffect(() => {
     document.body.style.margin = "0";
     document.body.style.padding = "0";
