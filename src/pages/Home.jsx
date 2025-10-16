@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "../css/styles.css";
 import heroVideo from "../assets/hero-bg.mp4";
 import lucasImg from "../assets/lucas_perfil.png";
@@ -198,45 +199,49 @@ export default function Home() {
 
       {/* Sección del Equipo */}
       <section id="equipo" className="py-5">
-        <div className="container text-center">
-          <h2 className="display-5 fw-bold text-primary mb-3">
-            Nuestro Equipo
-          </h2>
-          <p className="lead text-muted mb-5">
-            Conoce a los integrantes de nuestro equipo y descubre sus
-            habilidades e intereses.
-          </p>
-
-          <div className="row g-4">
-            {integrantes.map((integrante, i) => (
-              <div key={i} className="col-lg-4 col-md-6">
-                <div className="card h-100">
-                  <img
-                    src={integrante.img}
-                    className="card-img-top"
-                    alt={integrante.nombre}
-                  />
-                  <div className="card-body text-center">
-                    <h5 className="card-title">{integrante.nombre}</h5>
-                    <p className="text-muted mb-3">
-                      <i className="bi bi-geo-alt-fill me-1"></i>
-                      {integrante.ubicacion}
-                    </p>
-                    <p className="card-text">{integrante.descripcion}</p>
-                    <div className="skills-list mb-3">
-                      {integrante.skills.map((s, j) => (
-                        <span key={j} className="skill-tag">
-                          {s}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+  <div className="container text-center">
+    <h2 className="display-5 fw-bold text-primary mb-3">
+      Nuestro Equipo
+    </h2>
+    <p className="lead text-muted mb-5">
+      Conoce a los integrantes de nuestro equipo y descubre sus
+      habilidades e intereses.
+    </p>
+    <div className="row g-4">
+      {integrantes.map((integrante, i) => (
+        <div key={i} className="col-lg-4 col-md-6">
+          <Link 
+            to={`/integrantes/${integrante.nombre.toLowerCase()}`} 
+            style={{ textDecoration: 'none', color: 'inherit' }}
+          >
+            <div className="card h-100">
+              <img
+                src={integrante.img}
+                className="card-img-top"
+                alt={integrante.nombre}
+              />
+              <div className="card-body text-center">
+                <h5 className="card-title">{integrante.nombre}</h5>
+                <p className="text-muted mb-3">
+                  <i className="bi bi-geo-alt-fill me-1"></i>
+                  {integrante.ubicacion}
+                </p>
+                <p className="card-text">{integrante.descripcion}</p>
+                <div className="skills-list mb-3">
+                  {integrante.skills.map((s, j) => (
+                    <span key={j} className="skill-tag">
+                      {s}
+                    </span>
+                  ))}
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          </Link>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
     </div>
   );
 }

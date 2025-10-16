@@ -522,3 +522,13 @@ footer {
 .hero .btn-outline-light:hover i {
     color: #243949 !important;
 }
+
+#equipo .card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#equipo a:hover .card {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
