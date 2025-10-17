@@ -1,5 +1,5 @@
 .jose-page-container {
-  background: linear-gradient(135deg, #6a11cb, #2575fc, #6a11cb);
+  background: linear-gradient(135deg, #6a11cb, #2575fc, #6a11cb) !important;
   background-size: 400% 400%;
   animation: gradientAnimation 15s ease infinite;
   min-height: 100vh;
@@ -19,7 +19,7 @@
   margin: 2rem auto;
   border-radius: 15px;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.1); 
+  background: rgba(255, 255, 255, 0.1) !important;
   color: #fff;
   box-shadow: 0 8px 30px rgba(0,0,0,0.3);
   position: relative;
@@ -41,7 +41,7 @@
   position: relative;
   z-index: 1;
   padding: 3rem;
-  background: rgba(0, 0, 0, 0.35); 
+  background: rgba(0, 0, 0, 0.35) !important;
   border-radius: 15px;
 }
 
@@ -140,4 +140,12 @@
   .jose-page-container .profile-card .lead {
     font-size: 0.9rem;
   }
+}
+
+  .jose-page-container .card {
+    background-color: rgba(0, 0, 0, 0.35) !important;
+}
+
+.jose-page-container .favorites-list li {
+  background-color: white !important;
 }
