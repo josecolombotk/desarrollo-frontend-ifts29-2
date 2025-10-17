@@ -150,3 +150,7 @@ padding-top: 0px !important;
 .estiven-page .mt-5{
 margin-top: 0px !important;
 }
+
+.estiven-page .profile-img {
+  border: 4px solid white !important;
+}
