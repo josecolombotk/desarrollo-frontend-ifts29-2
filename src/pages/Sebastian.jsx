@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
 import MediaCard from '../components/mediacard/Mediacard';
 import '../css/sebastian.css';
 import { usePageMetadata } from '../hooks/usePageMetadata';
@@ -150,6 +151,33 @@ const Sebastian = () => {
           </div>
         </div>
       </section>
+
+       {/* Navegación entre integrantes */}
+       <section className="mb-5 py-4 text-white sebastian-navegacion">
+              <div className="container">
+                <div className="row">
+                  <div className="col-12">
+                    <div className="d-flex justify-content-between align-items-center">
+                      <Link to="/integrantes/lucas" className="btn sebastian-bordes">
+                        <i className="bi bi-arrow-left me-1"></i>Perfil anterior
+                      </Link>
+                      <div className="text-center">
+                        <small>Otros integrantes:</small>
+                        <div className="mt-2">
+                          <Link to="/integrantes/lucas" className="btn btn-sm  me-2 small sebastian-bordes">Lucas</Link>
+                          <Link to="/integrantes/sebastián" className="btn btn-sm  me-2 sebastian-bordes">Sebastian</Link>
+                          <Link to="/integrantes/estiven" className="btn btn-sm  me-2 sebastian-bordes">Estiven</Link>
+                          <Link to="/integrantes/jose" className="btn btn-sm  sebastian-bordes">Jose</Link>
+                        </div>
+                      </div>
+                      <Link to="/integrantes/victoria" className="btn sebastian-bordes">
+                        Siguiente perfil<i className="bi bi-arrow-right ms-1"></i>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
     </div>
   );
 };

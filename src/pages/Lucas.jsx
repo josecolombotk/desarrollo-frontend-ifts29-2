@@ -253,12 +253,12 @@ export default function LucasPage() {
           <div className="row">
             <div className="col-12">
               <div className="d-flex justify-content-between align-items-center">
-                <Link to="/" className="btn btn-outline-light">
+                <Link to="/integrantes/jose" className="btn btn-outline-light">
                   <i className="bi bi-arrow-left me-1"></i>Volver al Bastión
                 </Link>
 
                 <Link
-                  to="/integrantes/sebastian"
+                  to="/integrantes/sebastián"
                   className="btn btn-outline-light"
                 >
                   Siguiente Hermano<i className="bi bi-arrow-right ms-1"></i>

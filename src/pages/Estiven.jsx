@@ -24,7 +24,7 @@ const Estiven = () => {
 
   const [rotation, setRotation] = useState(0);
 
-  // DATOS PARA LOS CARRUSELES - DEBEN ESTAR DEFINIDOS
+  // DATOS PARA LOS CARRUSELES 
   const moviesData = [
     { 
       image: shelterMovie, 
@@ -220,7 +220,7 @@ const Estiven = () => {
       {/* Navegación entre integrantes */}
       <section className="py-4 bg-primary text-white">
         <div className="container d-flex justify-content-between align-items-center">
-          <Link to="/integrantes/jose" className="btn btn-outline-light">
+          <Link to="/integrantes/victoria" className="btn btn-outline-light">
             <i className="bi bi-arrow-left me-1"></i>Perfil anterior
           </Link>
           <div className="text-center">
@@ -232,7 +232,7 @@ const Estiven = () => {
               <Link to="/integrantes/jose" className="btn btn-sm btn-outline-light">Jose</Link>
             </div>
           </div>
-          <Link to="/integrantes/lucas" className="btn btn-outline-light">
+          <Link to="/integrantes/jose" className="btn btn-outline-light">
             Siguiente perfil<i className="bi bi-arrow-right ms-1"></i>
           </Link>
         </div>
