@@ -11,6 +11,7 @@ import BitacoraPage from "./pages/Bitacora";
 import IntegrantePage from "./pages/IntegrantePage";
 import Galeria from "./pages/GaleriaJsonPage";
 import ApiPage from "./pages/Apipage";
+import Diagrama from "./pages/Diagrama.jsx";
 
 // --- Componente Layout ---
 const Layout = () => {
@@ -45,6 +46,7 @@ function App() {
         <Route path="bitacora" element={<BitacoraPage />} />
         <Route path="galeria" element={<Galeria />} />
         <Route path="apipage" element={<ApiPage />} />
+        <Route path="diagrama" element={<Diagrama />} />
 
         {/* La ruta vuelve a ser como al principio */}
         <Route path="integrantes/:id" element={<IntegrantePage />} />
