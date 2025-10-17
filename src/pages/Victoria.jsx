@@ -458,7 +458,7 @@ export default function Victoria() {
           <div className="row">
             <div className="col-12">
               <div className="d-flex justify-content-between align-items-center">
-                <Link to="/integrantes/sebastian" className="btn btn-outline-light">
+                <Link to="/integrantes/sebastián" className="btn btn-outline-light">
                   <i className="bi bi-arrow-left me-1"></i>Perfil anterior
                 </Link>
                 <div className="text-center">
