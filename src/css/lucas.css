@@ -14,19 +14,19 @@
 
 /* Contenedor principal con el fondo */
 .lucas-page-container {
-  background-image: url("../assets/lucas_background.png");
+  background-image: url("../assets/lucas_background.png") !important;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-color: var(--dark-bg);
+  background-color: var(--dark-bg) !important;
   font-family: "Cormorant Garamond", serif;
   min-height: 100vh; 
 }
 
 /* Estilo de la tarjeta del perfil */
 .lucas-page-container .card {
-  background-color: var(--card-bg-color);
-  border: 1px solid var(--secondary-color);
+  background-color: var(--card-bg-color) !important;
+  border: 1px solid var(--secondary-color) !important;
   box-shadow: var(--shadow);
   border-radius: var(--border-radius) !important;
 }
@@ -34,7 +34,7 @@
 
 
 .lucas-page-container .card .card-body {
-  background-color: var(--card-bg-color);
+  background-color: var(--card-bg-color) !important;
 }
 
 .card::before {
@@ -72,25 +72,25 @@
 
 /* Botones con estilo personalizado */
 .lucas-page-container .profile-card .btn-primary {
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
-  color: white;
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: white !important;
   transition: background-color 0.3s ease;
 }
 
 .lucas-page-container .btn-primary:hover {
-  background-color: #a4790b;
-  border-color: #a4790b;
+  background-color: #a4790b !important;
+  border-color: #a4790b !important;
 }
 
 .lucas-page-container .btn-outline-primary {
-  color: var(--primary-color);
+  color: var(--primary-color) !important;
   border-color: var(--primary-color);
   transition: all 0.3s ease;
 }
 
 .lucas-page-container .btn-outline-primary:hover {
-  background-color: var(--primary-color);
+  background-color: var(--primary-color) !important;
   color: white;
 }
 
@@ -100,15 +100,15 @@
 }
 
 .lucas-page-container .btn-outline-success:hover {
-  background-color: var(--accent-color);
+  background-color: var(--accent-color) !important;
   color: white;
 }
 
 /* Tags de habilidades */
 .lucas-page-container .skills-list .skill-tag {
   display: inline-block;
-  background-color: var(--secondary-color);
-  color: white;
+  background-color: var(--secondary-color) !important;
+  color: white !important;
   padding: 8px 15px;
   margin: 5px;
   border-radius: 20px;
@@ -118,7 +118,7 @@
 
 .lucas-page-container .skills-list .skill-tag:hover {
   transform: translateY(-3px);
-  background-color: var(--primary-color);
+  background-color: var(--primary-color) !important;
 }
 
 /* Listas de favoritos */
@@ -129,7 +129,7 @@
 }
 
 .lucas-page-container .favorites-list li {
-  background-color: var(--card-bg-color);
+  background-color: var(--card-bg-color) !important;
   border-left: 4px solid var(--primary-color) !important;
   padding: 1rem;
   margin-bottom: 0.5rem;
@@ -140,6 +140,7 @@
 .lucas-page-container .favorites-list li:hover {
   transform: scale(1.02);
   border-left-color: var(--accent-color);
+  background-color: var(--white) !important;
 }
 
 /* Estilo para las nuevas imágenes de favoritos */
