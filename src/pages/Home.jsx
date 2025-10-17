@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../css/styles.css";
+import { usePageMetadata } from "../hooks/usePageMetadata";
 import heroVideo from "../assets/hero-bg.mp4";
 import lucasImg from "../assets/lucas_perfil.png";
 import victoriaImg from "../assets/victoria-ind.png";
@@ -10,6 +11,7 @@ import estivenImg from "../assets/est-avatar.png";
 import favicon from "../assets/favicon.png";
 
 export default function Home() {
+  usePageMetadata("Equipo Innovador - Inicio", favicon);
   const [clima, setClima] = useState(null);
 
   // Implementación del Toast de bienvenida
@@ -47,15 +49,6 @@ export default function Home() {
 
   // Llamada a API de clima
   useEffect(() => {
-    //  favicon y título dinámico
-    const link = document.createElement("link");
-    const title = document.createElement("title");
-    title.textContent = "Equipo Innovador - Inicio";
-    document.head.appendChild(title);
-    link.rel = "icon";
-    link.href = favicon;
-    document.head.appendChild(link);
-
     // definimos la función y la ejecutamos
     async function fetchClima() {
       try {
@@ -77,11 +70,6 @@ export default function Home() {
     }
 
     fetchClima();
-
-    return () => {
-      document.head.removeChild(link);
-      document.head.removeChild(title);
-    };
   }, []);
 
   const integrantes = [

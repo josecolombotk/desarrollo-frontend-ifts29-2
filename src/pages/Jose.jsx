@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Carousel } from "bootstrap";
+import { usePageMetadata } from "../hooks/usePageMetadata";
 import "../css/jose.css"; 
 import joseImg from "../assets/jose.png";
 import juego1Img from "../assets/juego1.png";
@@ -15,20 +16,7 @@ import logan4Img from "../assets/logan4.jpeg";
 import joseFavicon from "../assets/jose-favicon.png";
 
 export default function Jose() {
-  useEffect(() => {
-    const link = document.createElement("link");
-    const title = document.createElement("title");
-    link.rel = "icon";
-    link.href = joseFavicon;
-    document.title = "José - Perfil"; 
-    document.head.appendChild(link);
-    document.head.appendChild(title);
-
-    return () => {
-      document.head.removeChild(link);
-      document.head.removeChild(title);
-    };
-  }, []);
+  usePageMetadata("José - Perfil", joseFavicon);
 
   const imagenesLogan = [logan1Img, logan2Img, logan3Img, logan4Img];
   const [indiceImagen, setIndiceImagen] = useState(0);

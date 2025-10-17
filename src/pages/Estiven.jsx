@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../css/estiven.css";
 import SequentialCarousel from "../components/carousel3d/Carousel";
+import { usePageMetadata } from "../hooks/usePageMetadata";
 import Carousel3D from "../components/carousel3d/Carousel3D";
 
 import estivenFavicon from "../assets/est-favicon.png";
@@ -19,6 +20,8 @@ import theNightsSong from "../assets/est-the_nights-song.jpg";
 import youAreTheReasonSong from "../assets/est-you_are_the_reason-song.jpg";
 
 const Estiven = () => {
+  usePageMetadata("Estiven - Perfil", estivenFavicon);
+
   const [rotation, setRotation] = useState(0);
 
   // DATOS PARA LOS CARRUSELES - DEBEN ESTAR DEFINIDOS

@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "../css/galeria.css";
 import galeriaData from "../data/galeria.json";
+import { usePageMetadata } from "../hooks/usePageMetadata";
+import favicon from "../assets/favicon.png";
 
 export default function GaleriaJsonPage() {
+  usePageMetadata("Equipo Innovador - deas de Proyectos - Galería", favicon);
+
   const [datos, setDatos] = useState([]);
   const [filtro, setFiltro] = useState("todos");
   const [busqueda, setBusqueda] = useState("");
@@ -18,13 +22,14 @@ export default function GaleriaJsonPage() {
   }, []);
 
   // Obtener categorías únicas
-  const categorias = ["todos", ...new Set(datos.map(item => item.categoria))];
+  const categorias = ["todos", ...new Set(datos.map((item) => item.categoria))];
 
   // Filtrar datos
-  const datosFiltrados = datos.filter(item => {
+  const datosFiltrados = datos.filter((item) => {
     const cumpleFiltro = filtro === "todos" || item.categoria === filtro;
-    const cumpleBusqueda = item.titulo.toLowerCase().includes(busqueda.toLowerCase()) ||
-                          item.descripcion.toLowerCase().includes(busqueda.toLowerCase());
+    const cumpleBusqueda =
+      item.titulo.toLowerCase().includes(busqueda.toLowerCase()) ||
+      item.descripcion.toLowerCase().includes(busqueda.toLowerCase());
     return cumpleFiltro && cumpleBusqueda;
   });
 
@@ -47,7 +52,8 @@ export default function GaleriaJsonPage() {
             Ideas de Proyectos Innovadores
           </h1>
           <p className="galeria-subtitulo">
-            Explora nuestra colección de {datos.length} ideas de proyectos increíbles
+            Explora nuestra colección de {datos.length} ideas de proyectos
+            increíbles
           </p>
         </div>
       </header>
@@ -78,10 +84,10 @@ export default function GaleriaJsonPage() {
             {/* Filtros */}
             <div className="col-md-6">
               <div className="filtros-container">
-                {categorias.map(cat => (
+                {categorias.map((cat) => (
                   <button
                     key={cat}
-                    className={`filtro-btn ${filtro === cat ? 'active' : ''}`}
+                    className={`filtro-btn ${filtro === cat ? "active" : ""}`}
                     onClick={() => setFiltro(cat)}
                   >
                     {cat}
@@ -107,19 +113,31 @@ export default function GaleriaJsonPage() {
               <i className="bi bi-inbox"></i>
               <h3>No se encontraron resultados</h3>
               <p>Intenta con otros términos de búsqueda o filtros</p>
-              <button className="btn btn-primary" onClick={() => { setBusqueda(""); setFiltro("todos"); }}>
+              <button
+                className="btn btn-primary"
+                onClick={() => {
+                  setBusqueda("");
+                  setFiltro("todos");
+                }}
+              >
                 Limpiar filtros
               </button>
             </div>
           ) : (
             <div className="row g-4">
-              {datosFiltrados.map(item => (
+              {datosFiltrados.map((item) => (
                 <div key={item.id} className="col-lg-4 col-md-6">
                   <div className="proyecto-card">
                     <div className="card-image-container">
-                      <img src={item.imagen} alt={item.titulo} className="card-img" />
+                      <img
+                        src={item.imagen}
+                        alt={item.titulo}
+                        className="card-img"
+                      />
                       <div className="card-overlay">
-                        <span className="categoria-badge">{item.categoria}</span>
+                        <span className="categoria-badge">
+                          {item.categoria}
+                        </span>
                         <span className="año-badge">{item.año}</span>
                       </div>
                     </div>
@@ -134,9 +152,6 @@ export default function GaleriaJsonPage() {
           )}
         </div>
       </section>
-
-
-      
     </div>
   );
 }

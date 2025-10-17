@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { Carousel } from "bootstrap";
 import "../css/victoria.css";
 import { Link } from "react-router-dom";
+import { usePageMetadata } from "../hooks/usePageMetadata";
 
 // Importar imágenes desde assets
 import victoriaImg from "../assets/victoria-ind.png";
@@ -24,30 +25,7 @@ export default function Victoria() {
   const carouselRef = useRef(null);
   const pageContainerRef = useRef(null);
 
-
-  useEffect(() => {
-
-    const originalTitle = document.title;
-    document.title = "Victoria";
-
-
-    let link = document.querySelector("link[rel~='icon']");
-    if (!link) {
-      link = document.createElement("link");
-      link.rel = "icon";
-      document.head.appendChild(link);
-    }
-    const originalIcon = link.href;
-    link.href = favicon;
-
-
-    return () => {
-      document.title = originalTitle;
-      if (originalIcon) {
-        link.href = originalIcon;
-      }
-    };
-  }, []);
+  usePageMetadata("Victoria - Perfil", favicon);
 
   // Función de animación de corazones
   const crearCorazon = () => {

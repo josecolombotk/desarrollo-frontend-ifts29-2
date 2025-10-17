@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
-import "../css/Bitacora.css"; 
-
+import "../css/Bitacora.css";
+import { usePageMetadata } from "../hooks/usePageMetadata";
+import favicon from "../assets/favicon.png";
 
 export default function Bitacora() {
+  usePageMetadata("Equipo Innovador - Bitácora", favicon);
   const [mostrarResumen, setMostrarResumen] = useState(false);
 
   useEffect(() => {
@@ -22,12 +24,20 @@ export default function Bitacora() {
     {
       titulo: "Fase 1: Planificación y Diseño",
       dias: "Días 1-3",
-      puntos: ["Paleta de colores y tipografía", "Layout con tarjetas", "Planificación de componentes"],
+      puntos: [
+        "Paleta de colores y tipografía",
+        "Layout con tarjetas",
+        "Planificación de componentes",
+      ],
     },
     {
       titulo: "Fase 2: Desarrollo Frontend",
       dias: "Días 4-10",
-      puntos: ["Bootstrap y CSS personalizado", "Diseño responsivo", "Animaciones y componentes interactivos"],
+      puntos: [
+        "Bootstrap y CSS personalizado",
+        "Diseño responsivo",
+        "Animaciones y componentes interactivos",
+      ],
     },
     {
       titulo: "Fase 3: Interactividad JS",
@@ -46,16 +56,22 @@ export default function Bitacora() {
       <section className="bitacora-header">
         <div className="container">
           <h1>Bitácora del Proyecto</h1>
-          <p>Registro detallado del proceso de desarrollo y decisiones tomadas</p>
+          <p>
+            Registro detallado del proceso de desarrollo y decisiones tomadas
+          </p>
         </div>
       </section>
 
       <section className="container py-5">
         {fases.map((fase, i) => (
           <div key={i} className="bitacora-card fade-in">
-            <h3>{fase.titulo} <small>({fase.dias})</small></h3>
+            <h3>
+              {fase.titulo} <small>({fase.dias})</small>
+            </h3>
             <ul>
-              {fase.puntos.map((p, j) => <li key={j}>{p}</li>)}
+              {fase.puntos.map((p, j) => (
+                <li key={j}>{p}</li>
+              ))}
             </ul>
           </div>
         ))}
@@ -79,7 +95,6 @@ export default function Bitacora() {
           </div>
         )}
       </section>
-
     </>
   );
 }
