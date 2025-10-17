@@ -1,26 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../css/lucas.css";
+import { usePageMetadata } from "../hooks/usePageMetadata";
 import lucasPerfilImg from "../assets/lucas_perfil.png";
 import pelisFotoImg from "../assets/pelis_foto.png";
 import edFotoImg from "../assets/ed_foto.png";
 import favicon from "../assets/lucas_icn.ico";
 
 export default function LucasPage() {
-  useEffect(() => {
-    const link = document.createElement("link");
-    const title = document.createElement("title");
-    title.text = "Lucas - Guardián del Muro";
-    document.head.appendChild(title);
-    link.rel = "icon";
-    link.href = favicon;
-    document.head.appendChild(link);
-
-    return () => {
-      document.head.removeChild(link);
-      document.head.removeChild(title);
-    };
-  }, []);
+  usePageMetadata("Lucas - Guardián del Muro", favicon);
 
   // Estado para manejar la visibilidad de la información adicional
   const [infoVisible, setInfoVisible] = useState(false);
@@ -50,11 +38,6 @@ export default function LucasPage() {
       "¡Gracias por visitar mi perfil! Que los Antiguos Dioses y los Nuevos te acompañen."
     );
   };
-
-  // Efecto para cambiar el título de la página
-  useEffect(() => {
-    document.title = "Lucas - Guardián del Muro";
-  }, []);
 
   //  Estructura del Componente (reemplaza al body del HTML) 
   return (

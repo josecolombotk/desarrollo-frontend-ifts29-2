@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import "../css/apipage.css";
+import { usePageMetadata } from "../hooks/usePageMetadata";
+import favicon from "../assets/favicon.png";
 
 export default function ApiPage() {
   const [weatherData, setWeatherData] = useState([]);
@@ -13,8 +15,9 @@ export default function ApiPage() {
     { name: "Sebastian", city: "Mendoza", province: "Mendoza", lat: -32.89, lon: -68.83 }
   ];
 
+  usePageMetadata("Equipo Innovador - Nuestros Climas", favicon);
+
   useEffect(() => {
-    document.title = "Nuestros Climas";
     const fetchWeather = async () => {
       try {
         const promises = developers.map(dev =>

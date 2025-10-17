@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import MediaCard from '../components/mediacard/Mediacard';
 import '../css/sebastian.css';
+import { usePageMetadata } from '../hooks/usePageMetadata';
 import peliculas from '../data/peliculas.json';
 import musica from '../data/musica.json';
+import favicon from '../assets/favicon.png';
 
 const Sebastian = () => {
+  usePageMetadata("Sebastián - Perfil", favicon);
+
   const [rotationAngle, setRotationAngle] = useState(0);
   const [skillsColorChanged, setSkillsColorChanged] = useState(false);
 

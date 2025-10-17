@@ -1,81 +1,107 @@
-  `````
-Carrera: Técnico Superior en Desarrollo de Software
-Materia: Desarrollo Frontend
-Profesor:  LUCIANO ARIEL MARTINEZ
-Año: 2025
 
+# Proyecto Final: Single Page Application con React
 
-Equipo Innovador - Grupo 9
-Integrantes:
-Sebastián	Gutierrez
-Estiven	Fernandez
-Lucas	Tarantino
-Jose Luis Colombo
-Victoria Sobral
+### **Carrera:** Técnico Superior en Desarrollo de Software
 
+### **Materia:** Desarrollo Frontend
 
-Este proyecto es una Single Page Application (SPA) desarrollada con React y Vite,
-como parte de la materia Desarrollo Frontend en el *Instituto de Formación
- Técnica Superior N°29*. 
-El objetivo principal es transformar un sitio web estático en una aplicación moderna,
- interactiva y modular, integrando componentes dinámicos como una API de clima
-en tiempo real.
+### **Profesor:** LUCIANO ARIEL MARTINEZ
 
+### **Año:** 2025
 
- Características principales
-- Navegación sin recargar la página gracias a **React Router DOM**.  
--  Video de fondo en la sección principal.  
--  Integración con **API de clima** (Open-Meteo) mostrando temperatura en tiempo real.  
--  Componentes reutilizables y organizados por secciones
-(Home, Bitácora, Integrantes, Victoria, etc.).  
--  Diseño responsive con **Bootstrap** y CSS personalizado.  
--  Configuración optimizada con **Vite** para desarrollo rápido.
+-----
 
+## Equipo Innovador - Grupo 9
 
- Estructura del proyecto
+  * Sebastián Gutierrez
+  * Estiven Fernandez
+  * Lucas Tarantino
+  * Jose Luis Colombo
+  * Victoria Sobral
+
+-----
+
+## Descripción del Proyecto
+
+Este proyecto es una **Single Page Application (SPA)** desarrollada con **React** y **Vite**, como parte de la materia Desarrollo Frontend en el *Instituto de Formación Técnica Superior N°29*.
+
+El objetivo principal es transformar un sitio web estático en una aplicación moderna, interactiva y modular, integrando componentes dinámicos como una API de clima en tiempo real.
+
+-----
+
+## Características Principales
+
+  - navegante **Navegación fluida** sin recargar la página gracias a **React Router DOM**.
+  - 🎥 **Video de fondo** en la sección principal para un mayor impacto visual.
+  - ☀️ **Integración con API de clima** (Open-Meteo) mostrando la temperatura de Buenos Aires en tiempo real.
+  - 🧩 **Componentes reutilizables** y organizados por secciones (Home, Bitácora, Integrantes, Victoria, etc.).
+  - 📱 **Diseño responsive** utilizando **Bootstrap** y CSS personalizado.
+  - ⚡ **Configuración optimizada** con **Vite** para un entorno de desarrollo rápido y eficiente.
+
+-----
+
+## Estructura del Proyecto
+
+```
 src/
-├── assets/ # Imágenes, videos y recursos multimedia
-├── components/ # Componentes reutilizables (Navbar, Footer, etc.)
-├── pages/ # Páginas principales (Home, Bitacora, Victoria, etc.)
-├── css/ # Estilos CSS personalizados
-├── App.jsx # Enrutamiento principal de la SPA
-└── main.jsx # Punto de entrada
+├── assets/         # Imágenes, videos y recursos multimedia
+├── components/     # Componentes reutilizables (Navbar, Footer, etc.)
+├── pages/          # Páginas principales (Home, Bitacora, Victoria, etc.)
+├── css/            # Estilos CSS personalizados
+├── App.jsx         # Enrutamiento principal de la SPA
+└── main.jsx        # Punto de entrada de la aplicación
+```
 
+-----
 
-Tecnologías utilizadas
-| React | Biblioteca principal para la interfaz de usuario |
-| Vite | Entorno de desarrollo rápido y moderno |
-| CSS / Bootstrap | Estilos visuales y diseño responsive |
-| Open-Meteo API | Consulta de datos meteorológicos en tiempo real |
-| React Router DOM | Manejo de rutas en la SPA |
+## Tecnologías Utilizadas
 
+| Tecnología       | Descripción                                   |
+| ---------------- | --------------------------------------------- |
+| **React** | Biblioteca principal para la interfaz de usuario. |
+| **Vite** | Entorno de desarrollo rápido y moderno.       |
+| **Bootstrap/CSS**| Estilos visuales y diseño responsive.         |
+| **Open-Meteo API** | Consulta de datos meteorológicos en tiempo real. |
+| **React Router DOM** | Manejo de rutas en la SPA.                    |
 
-API del Clima
-El proyecto obtiene información del clima actual de Buenos Aires utilizando
- la API pública Open-Meteo.
+-----
 
+## Objetivos del Proyecto
 
-Instalación y ejecución
-Si desea ejecutar el proyecto en su máquina local, siga estos pasos:
+  - Aplicar los conceptos de **componentización y reutilización** de React.
+  - Integrar **servicios externos** mediante APIs públicas.
+  - Implementar una **interfaz responsiva** y atractiva.
+  - Practicar el control de versiones con **Git y GitHub**.
 
-Clonar el repositorio
-git clone https://github.com/josecolombotk/desarrollo-frontend-ifts29-2.git
+-----
 
-Entrar en el proyecto
-cd desarrollo-frontend-ifts29-2
+## Instalación y Ejecución Local
 
-Instalar dependencias
-npm install
+Si deseas ejecutar el proyecto en tu máquina local, sigue estos pasos:
 
-# Iniciar el servidor de desarrollo
-npm run dev
-Luego abra en su navegador:
-http://localhost:5173
+1.  **Clonar el repositorio:**
 
+    ```sh
+    git clone https://github.com/josecolombotk/desarrollo-frontend-ifts29-2.git
+    ```
 
-Objetivos del proyecto
--Aplicar los conceptos de componentización y reutilización de React.
--Integrar servicios externos mediante APIs públicas.
--Implementar una interfaz responsiva y atractiva.
--Practicar control de versiones con Git y GitHub.
+2.  **Entrar en el directorio del proyecto:**
 
+    ```sh
+    cd desarrollo-frontend-ifts29-2
+    ```
+
+3.  **Instalar dependencias:**
+
+    ```sh
+    npm install
+    ```
+
+4.  **Iniciar el servidor de desarrollo:**
+
+    ```sh
+    npm run dev
+    ```
+
+5.  **Abrir en el navegador:**
+    Luego, visita [`http://localhost:5173`](https://www.google.com/search?q=http://localhost:5173) en tu navegador.

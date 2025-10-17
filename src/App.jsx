@@ -1,7 +1,6 @@
 import React from "react";
 import { Routes, Route, Outlet } from "react-router-dom";
 
-
 //  Importar componentes de layout
 import Sidebar from "./components/sidebar/Sidebar";
 import Footer from "./components/footer/Footer.jsx";
@@ -10,8 +9,8 @@ import Footer from "./components/footer/Footer.jsx";
 import HomePage from "./pages/Home";
 import BitacoraPage from "./pages/Bitacora";
 import IntegrantePage from "./pages/IntegrantePage";
-import Galeria from './pages/GaleriaJsonPage';
-import ApiPage from './pages/Apipage';
+import Galeria from "./pages/GaleriaJsonPage";
+import ApiPage from "./pages/Apipage";
 
 // --- Componente Layout ---
 const Layout = () => {
@@ -44,8 +43,8 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
         <Route path="bitacora" element={<BitacoraPage />} />
-         <Route path="galeria" element={<Galeria />} />
-         <Route path="apipage" element={<ApiPage />} />
+        <Route path="galeria" element={<Galeria />} />
+        <Route path="apipage" element={<ApiPage />} />
 
         {/* La ruta vuelve a ser como al principio */}
         <Route path="integrantes/:id" element={<IntegrantePage />} />
