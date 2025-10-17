@@ -130,6 +130,15 @@ const Sidebar = () => {
                 Nuestros Climas
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to="/diagrama"
+                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+                onClick={closeSidebar}
+              >
+                Diagrama
+              </NavLink>
+            </li>
 
             {/* Divisor */}
             <li style={dividerContainerStyles}>
