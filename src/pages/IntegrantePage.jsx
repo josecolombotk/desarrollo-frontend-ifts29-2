@@ -27,7 +27,7 @@ const IntegrantePage = () => {
       return <VictoriaPage />;
     case 'estiven':
       return <EstivenPage />;
-    case 'sebastian':
+    case 'sebastián':
       return <SebastianPage />;
     case 'jose':
       return <JosePage />;
