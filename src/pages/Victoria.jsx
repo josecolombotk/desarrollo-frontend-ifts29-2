@@ -487,7 +487,7 @@ export default function Victoria() {
                   <small>Otros integrantes:</small>
                   <div className="mt-2">
                     <Link to="/integrantes/lucas" className="btn btn-sm btn-outline-light me-2">Lucas</Link>
-                    <Link to="/integrantes/sebastian" className="btn btn-sm btn-outline-light me-2">Sebastian</Link>
+                    <Link to="/integrantes/sebastián" className="btn btn-sm btn-outline-light me-2">Sebastian</Link>
                     <Link to="/integrantes/estiven" className="btn btn-sm btn-outline-light me-2">Estiven</Link>
                     <Link to="/integrantes/jose" className="btn btn-sm btn-outline-light">Jose</Link>
                   </div>

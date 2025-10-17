@@ -13,7 +13,7 @@ const Sidebar = () => {
     { id: 'estiven', nombre: 'Estiven' },
     { id: 'jose', nombre: 'Jose' },
     { id: 'lucas', nombre: 'Lucas' },
-    { id: 'sebastian', nombre: 'Sebastián' },
+    { id: 'sebastián', nombre: 'Sebastián' },
     { id: 'victoria', nombre: 'Victoria' },
   ];
 

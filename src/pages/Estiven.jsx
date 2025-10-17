@@ -225,7 +225,7 @@ const Estiven = () => {
             <div className="mt-2">
               <Link to="/integrantes/lucas" className="btn btn-sm btn-outline-light me-2">Lucas</Link>
               <Link to="/integrantes/victoria" className="btn btn-sm btn-outline-light me-2">Victoria</Link>
-              <Link to="/integrantes/sebastian" className="btn btn-sm btn-outline-light me-2">Sebastián</Link>
+              <Link to="/integrantes/sebastián" className="btn btn-sm btn-outline-light me-2">Sebastián</Link>
               <Link to="/integrantes/jose" className="btn btn-sm btn-outline-light">Jose</Link>
             </div>
           </div>
