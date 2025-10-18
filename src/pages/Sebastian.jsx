@@ -57,7 +57,7 @@ const Sebastian = () => {
                         <i className="bi bi-calendar-event me-1"></i>42 años
                       </p>
                       {/* Botones con colores de tu paleta */}
-                      <button className="btn btn-primary me-2" onClick={rotarImagen}>
+                      <button className="btn btn-primary me-2 m-auto" onClick={rotarImagen}>
                         <i className="bi bi-arrow-clockwise me-1"></i>Rotar imagen
                       </button>
                       {/* <button className="btn btn-primary" onClick={cambiarColoresHabilidades}>
