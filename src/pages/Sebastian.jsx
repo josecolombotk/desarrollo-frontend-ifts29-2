@@ -6,6 +6,7 @@ import { usePageMetadata } from '../hooks/usePageMetadata';
 import peliculas from '../data/peliculas.json';
 import musica from '../data/musica.json';
 import favicon from '../assets/favicon.png';
+import sebastianPerfil from '../assets/sebastian-perfil.webp';
 
 const Sebastian = () => {
   usePageMetadata("Sebastián - Perfil", favicon);
@@ -40,7 +41,7 @@ const Sebastian = () => {
                   <div className="row align-items-center">
                     <div className="col-lg-5 text-center mb-4 mb-lg-0 ">
                       <img 
-                        src="/src/assets/sebastian-perfil.webp" 
+                        src={sebastianPerfil}
                         alt="Sebastián" 
                         className="sebastian-profile-img mb-3" 
                         style={{

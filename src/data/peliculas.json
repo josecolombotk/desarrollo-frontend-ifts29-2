@@ -2,7 +2,7 @@
   {
     "id": 1,
     "titulo": "Terminator 2: El Juicio Final",
-    "imagen": "/src/assets/sebastian-terminator2.jpg",
+    "imagen": "../src/assets/sebastian-terminator2.jpg",
     "director": "James Cameron",
     "año": "1991",
     "genero": "Ciencia Ficción",
@@ -13,7 +13,7 @@
   {
     "id": 2,
     "titulo": "The Big Short",
-    "imagen": "/src/assets/sebastian-thebigshort1.jpg",
+    "imagen": "../src/assets/sebastian-thebigshort1.jpg",
     "director": "Adam McKay",
     "año": "2015",
     "genero": "Drama",
@@ -24,7 +24,7 @@
   {
     "id": 3,
     "titulo": "El Hombre Sin Pasado",
-    "imagen": "/src/assets/sebastian-ajeoosi2.jpg",
+    "imagen": "../src/assets/sebastian-ajeoosi2.jpg",
     "director": "Lee Jeong-beom",
     "año": "2010",
     "genero": "Acción",
@@ -35,7 +35,7 @@
   {
     "id": 4,
     "titulo": "Cómo Hackear a tu Jefe",
-    "imagen": "/src/assets/sebastian-Como_Hackear_seu_Chefe3.jpg",
+    "imagen": "../src/assets/sebastian-Como_Hackear_seu_Chefe3.jpg",
     "director": "Comedia",
     "año": "2020",
     "genero": "Tecnología",

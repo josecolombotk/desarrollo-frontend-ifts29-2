@@ -20,7 +20,7 @@
   background-attachment: fixed;
   background-color: var(--dark-bg) !important;
   font-family: "Cormorant Garamond", serif;
-  min-height: 100vh; 
+  min-height: 100vh;
 }
 
 /* Estilo de la tarjeta del perfil */
@@ -30,8 +30,6 @@
   box-shadow: var(--shadow);
   border-radius: var(--border-radius) !important;
 }
-
-
 
 .lucas-page-container .card .card-body {
   background-color: var(--card-bg-color) !important;
@@ -63,7 +61,7 @@
 
 .lucas-page-container .text-muted {
   color: var(--primary-color) !important;
-  font-size: 1.3rem; 
+  font-size: 1.3rem;
 }
 
 .lucas-page-container #slogan-display {
