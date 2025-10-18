@@ -152,7 +152,7 @@ export default function Victoria() {
                       </p>
 
                       <h4 className="text-primary mb-3">Habilidades</h4>
-                      <div className="skills-list mb-4">
+                      <div className="skills-list mb-4 justify-content-start">
                         <span className="skill-tag">Figma</span>
                         <span className="skill-tag">Adobe Suit</span>
                         <span className="skill-tag">Prototipado</span>
