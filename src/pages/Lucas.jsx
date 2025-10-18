@@ -70,7 +70,7 @@ export default function LucasPage() {
                       <p className="text-muted mb-3">
                         <i className="bi bi-calendar-event me-1"></i>31 años
                       </p>
-                      <button className="btn btn-primary" onClick={cambiarLema}>
+                      <button className="btn btn-primary m-auto" onClick={cambiarLema}>
                         <i className="bi bi-shuffle me-1"></i>Cambiar Lema
                       </button>
                     </div>
@@ -90,7 +90,7 @@ export default function LucasPage() {
                       </p>
 
                       <h4 className="text-primary mb-3">Habilidades</h4>
-                      <div className="skills-list mb-4">
+                      <div className="skills-list mb-4 justify-content-start">
                         <span className="skill-tag">HTML</span>
                         <span className="skill-tag">CSS</span>
                         <span className="skill-tag">POO</span>

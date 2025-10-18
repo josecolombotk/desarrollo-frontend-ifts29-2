@@ -5,7 +5,7 @@ import { usePageMetadata } from "../hooks/usePageMetadata";
 import favicon from "../assets/favicon.png";
 
 export default function GaleriaJsonPage() {
-  usePageMetadata("Equipo Innovador - deas de Proyectos - Galería", favicon);
+  usePageMetadata("Equipo Innovador - Galería", favicon);
 
   const [datos, setDatos] = useState([]);
   const [filtro, setFiltro] = useState("todos");
@@ -13,7 +13,6 @@ export default function GaleriaJsonPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    document.title = "Ideas de Proyectos";
     // Simular carga de datos
     setTimeout(() => {
       setDatos(galeriaData);
