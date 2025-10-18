@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 // Asegúrate de que la ruta a tu archivo CSS sea la correcta.
 import "../css/Bitacora.css"; 
+import { usePageMetadata } from "../hooks/usePageMetadata";
+import favicon from "../assets/favicon.png";
 
 export default function Bitacora() {
+  usePageMetadata("Equipo Innovador - Bitácora del Proyecto", favicon);
   // Estado para controlar la visibilidad del resumen ejecutivo.
   const [mostrarResumen, setMostrarResumen] = useState(false);
 

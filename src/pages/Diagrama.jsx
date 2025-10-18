@@ -2,8 +2,12 @@ import React from "react";
 import arbolRenderizado from "../assets/arbol_renderizado.png";
 import "../css/diagrama.css";
 import arbolCarpetas from "../assets/arbol_carpetas.png";
+import { usePageMetadata } from "../hooks/usePageMetadata";
+import favicon from "../assets/favicon.png";
 
 const Diagrama = () => {
+  usePageMetadata("Equipo Innovador - Diagramas", favicon);
+
   return (
     <div className="diagrama-container">
       <h1>Diagrama de Componentes y Estructura de Carpetas</h1>
